@@ -28,7 +28,7 @@ class XgbClassifier2:
         :param target_key: str label的名字
         :param ts_ratio: float 测试集比例
         :param feats: list 特征的数组
-        :param model_file: str 二进制模型文件的路径
+        :param save_folder: str 模型和其他信息文件的路径, 可以从这里加载继续训练
         """
         self.general_params = {
             'booster': 'gbtree',  # gbtree, gblinear, dart
