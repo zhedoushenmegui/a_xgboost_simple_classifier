@@ -1,0 +1,7 @@
+time_spend_company: 296.364518493937
+satisfaction_level: 295.2319738733034
+number_project: 263.88581100720353
+Work_accident: 199.1771802615384
+promotion_last_5years: 178.112183
+average_montly_hours: 148.90158353272727
+last_evaluation: 144.46172938799998

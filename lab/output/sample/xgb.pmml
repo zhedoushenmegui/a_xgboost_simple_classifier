@@ -1,0 +1,3370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.4">
+	<Header>
+		<Application name="JPMML-XGBoost" version="1.4-SNAPSHOT"/>
+		<Timestamp>2020-11-12T04:12:11Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="left" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="f0" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f1" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f2" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f3" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f4" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f5" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+		<DataField name="f6" optype="continuous" dataType="float">
+			<Value value="NaN" property="missing"/>
+		</DataField>
+	</DataDictionary>
+	<MiningModel functionName="classification" algorithmName="XGBoost (GBTree)" x-mathContext="float">
+		<MiningSchema>
+			<MiningField name="left" usageType="target"/>
+			<MiningField name="f0"/>
+			<MiningField name="f1"/>
+			<MiningField name="f2"/>
+			<MiningField name="f3"/>
+			<MiningField name="f4"/>
+			<MiningField name="f5"/>
+			<MiningField name="f6"/>
+		</MiningSchema>
+		<Segmentation multipleModelMethod="modelChain" missingPredictionTreatment="returnMissing">
+			<Segment id="1">
+				<True/>
+				<MiningModel functionName="regression" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="f0"/>
+						<MiningField name="f1"/>
+						<MiningField name="f2"/>
+						<MiningField name="f3"/>
+						<MiningField name="f4"/>
+						<MiningField name="f5"/>
+						<MiningField name="f6"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="xgbValue" optype="continuous" dataType="float" isFinalResult="false"/>
+					</Output>
+					<Segmentation multipleModelMethod="sum">
+						<Segment id="1">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.0">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="2">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.09182361">
+									<True/>
+									<Node score="-0.012243818">
+										<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											<Node score="0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+										</Node>
+										<Node score="0.042057995">
+											<SimplePredicate field="f3" operator="lessThan" value="283.0"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="215.0"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f3" operator="lessThan" value="242.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+										</Node>
+									</Node>
+									<Node score="0.061196893">
+										<SimplePredicate field="f1" operator="lessThan" value="0.77"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="3">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="-0.033267118">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												<Node score="0.04619625">
+													<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.94"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+									</Node>
+									<Node score="0.06475915">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+									</Node>
+									<Node score="0.015445217">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="4">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.024344498">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="265.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.03397369">
+											<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.058917403">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="273.0"/>
+										</Node>
+										<Node score="0.03474848">
+											<SimplePredicate field="f3" operator="lessThan" value="282.0"/>
+										</Node>
+									</Node>
+									<Node score="0.014375157">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="5">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+								</MiningSchema>
+								<Node score="-0.05911553">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.007554105">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.091234915">
+													<SimplePredicate field="f0" operator="lessThan" value="0.35"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="250.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+										<Node score="0.01682329">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.98"/>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f3" operator="lessThan" value="206.0"/>
+										<Node score="0.015448421">
+											<SimplePredicate field="f0" operator="lessThan" value="0.6"/>
+											<Node score="-0.08661058">
+												<SimplePredicate field="f0" operator="lessThan" value="0.53"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.71"/>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="6">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.023401676">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="265.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.09630167">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+										<Node score="-0.02684988">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.85"/>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="226.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f3" operator="lessThan" value="206.0"/>
+										<Node score="0.014510437">
+											<SimplePredicate field="f0" operator="lessThan" value="0.6"/>
+											<Node score="-0.08277209">
+												<SimplePredicate field="f0" operator="lessThan" value="0.53"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.71"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="7">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.022090763">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.07571648">
+													<SimplePredicate field="f0" operator="lessThan" value="0.35"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="265.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.09170938">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.03392477">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.046105016">
+											<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+											<Node score="-0.07410163">
+												<SimplePredicate field="f3" operator="lessThan" value="227.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+									</Node>
+									<Node score="0.018177332">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="8">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="-0.00983024">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="-0.0044656284">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												<Node score="0.061137676">
+													<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.94"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												<Node score="0.1">
+													<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+												</Node>
+											</Node>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+										</Node>
+									</Node>
+									<Node score="0.06130605">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											<Node score="0.04334949">
+												<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+												<Node score="-0.062337734">
+													<SimplePredicate field="f3" operator="lessThan" value="227.0"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.061106797">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="273.0"/>
+										</Node>
+										<Node score="0.0138945775">
+											<SimplePredicate field="f3" operator="lessThan" value="282.0"/>
+										</Node>
+									</Node>
+									<Node score="0.013756682">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="9">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.025448307">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.07000635">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="265.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.09209585">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.057964683">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.07001927">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											<Node score="0.04567108">
+												<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+												<Node score="-0.09087562">
+													<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.048863403">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="273.0"/>
+										</Node>
+										<Node score="-0.051939793">
+											<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+										</Node>
+									</Node>
+									<Node score="0.012808404">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="10">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.010679228">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.06787666">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.087891534">
+											<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.2"/>
+										</Node>
+									</Node>
+									<Node score="0.014325325">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.042545076">
+											<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+											<Node score="-0.08173809">
+												<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+										</Node>
+										<Node score="-0.083105914">
+											<SimplePredicate field="f1" operator="lessThan" value="0.9"/>
+										</Node>
+									</Node>
+									<Node score="0.015051112">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										</Node>
+										<Node score="-0.0731886">
+											<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.09904835">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="11">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+								</MiningSchema>
+								<Node score="-0.060494453">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.054906167">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.07236755">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.015852593">
+										<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+										<Node score="-0.015834477">
+											<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.06413117">
+											<SimplePredicate field="f3" operator="lessThan" value="226.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.72"/>
+										<Node score="0.053925794">
+											<SimplePredicate field="f3" operator="lessThan" value="157.0"/>
+											<Node score="-0.06494867">
+												<SimplePredicate field="f3" operator="lessThan" value="146.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.093092516">
+										<SimplePredicate field="f3" operator="lessThan" value="203.0"/>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="12">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="0.08961391">
+									<True/>
+									<Node score="0.03138397">
+										<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											<Node score="0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="246.0"/>
+											</Node>
+											<Node score="0.06953582">
+												<SimplePredicate field="f3" operator="lessThan" value="254.0"/>
+											</Node>
+										</Node>
+										<Node score="0.05039683">
+											<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+										</Node>
+									</Node>
+									<Node score="0.037742067">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.075011425">
+											<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.062898524">
+											<SimplePredicate field="f3" operator="lessThan" value="182.0"/>
+										</Node>
+									</Node>
+									<Node score="0.09347765">
+										<SimplePredicate field="f1" operator="lessThan" value="0.77"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="13">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.0037277236">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="-0.09997324">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+												<Node score="-0.053662326">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.092625625">
+											<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											<Node score="-0.099794604">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.096170224">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.03766879">
+												<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+												<Node score="-0.07553585">
+													<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.74"/>
+											<Node score="-0.03217114">
+												<SimplePredicate field="f1" operator="lessThan" value="0.9"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.02904438">
+											<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f0" operator="lessThan" value="0.78"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.083777264">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="14">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.008820052">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.08555776">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="0.017812189">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+													<Node score="-0.1">
+														<SimplePredicate field="f3" operator="lessThan" value="240.0"/>
+													</Node>
+												</Node>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+											</Node>
+											<Node score="0.1">
+												<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+											</Node>
+											<Node score="-0.08005345">
+												<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											<Node score="-0.05492524">
+												<SimplePredicate field="f3" operator="lessThan" value="140.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-2.751533E-4">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+												<Node score="-0.062080707">
+													<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.06851541">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.027354887">
+												<SimplePredicate field="f3" operator="lessThan" value="252.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.03570127">
+											<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.0855258">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="15">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="-0.012121677">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.030205071">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="0.05106768">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												<Node score="0.0887849">
+													<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+												</Node>
+												<Node score="-0.093013965">
+													<SimplePredicate field="f1" operator="lessThan" value="0.94"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+											</Node>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.09029712">
+											<SimplePredicate field="f3" operator="lessThan" value="140.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="132.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.012709821">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+										</Node>
+									</Node>
+									<Node score="0.02223713">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+											<Node score="-0.07164178">
+												<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.099405296">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.064871825">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="16">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.02305407">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.077621564">
+											<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+											<Node score="0.023206202">
+												<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+												<Node score="-0.09863332">
+													<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.09313584">
+											<SimplePredicate field="f3" operator="lessThan" value="271.0"/>
+										</Node>
+									</Node>
+									<Node score="0.06142813">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											<Node score="0.05953015">
+												<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+												<Node score="-0.037532445">
+													<SimplePredicate field="f3" operator="lessThan" value="173.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.05946363">
+												<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.032869525">
+										<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="273.0"/>
+											<Node score="-0.063062005">
+												<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+										<Node score="0.06444493">
+											<SimplePredicate field="f3" operator="lessThan" value="282.0"/>
+										</Node>
+									</Node>
+									<Node score="0.09657099">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.075469695">
+											<SimplePredicate field="f3" operator="lessThan" value="213.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="17">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.098596334">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.06116965">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+											</Node>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											</Node>
+										</Node>
+										<Node score="0.04693337">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.0861337">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.09708063">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.054335255">
+												<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												<Node score="-0.07229831">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.08066028">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.010807451">
+												<SimplePredicate field="f1" operator="lessThan" value="0.9"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.034191407">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.53"/>
+											</Node>
+										</Node>
+										<Node score="-0.07425318">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+									<Node score="0.007723325">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="18">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="0.070271365">
+									<True/>
+									<Node score="-0.0">
+										<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+										<Node score="-0.09319658">
+											<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											<Node score="0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+												<Node score="-0.088541985">
+													<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="246.0"/>
+											</Node>
+											<Node score="0.047510188">
+												<SimplePredicate field="f3" operator="lessThan" value="254.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.031093756">
+											<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+											<Node score="0.01277466">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.78"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="253.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="283.0"/>
+										</Node>
+									</Node>
+									<Node score="0.09103478">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="-0.012458573">
+											<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											</Node>
+											<Node score="-0.08499586">
+												<SimplePredicate field="f1" operator="lessThan" value="0.74"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.020747347">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="0.00881643">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="-0.09289115">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.09659274">
+											<SimplePredicate field="f1" operator="lessThan" value="0.55"/>
+										</Node>
+									</Node>
+									<Node score="-0.0034777771">
+										<SimplePredicate field="f1" operator="lessThan" value="0.77"/>
+										<Node score="-0.08992299">
+											<SimplePredicate field="f3" operator="lessThan" value="270.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="19">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.09695374">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.049860816">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+											</Node>
+											<Node score="0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											</Node>
+										</Node>
+										<Node score="0.06023241">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.07767732">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.09120228">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.041388348">
+												<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												<Node score="-0.06956346">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.079038925">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.06763051">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="0.018119743">
+												<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.08012414">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.039093938">
+											<SimplePredicate field="f1" operator="lessThan" value="0.82"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.53"/>
+											</Node>
+										</Node>
+										<Node score="-0.074415974">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="20">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.038108096">
+											<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+											<Node score="0.092531435">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											</Node>
+										</Node>
+										<Node score="0.03714255">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.08830481">
+												<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.02877192">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.09472111">
+											<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+											<Node score="0.00489884">
+												<SimplePredicate field="f3" operator="lessThan" value="254.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f1" operator="lessThan" value="0.78"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.084049545">
+											<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.08601203">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.66"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.00250635">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="21">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.094572">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.031456906">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.09426607">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="279.0"/>
+											</Node>
+										</Node>
+										<Node score="0.08957761">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.0745815">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.086643025">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.01643738">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.08294326">
+													<SimplePredicate field="f3" operator="lessThan" value="253.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="286.0"/>
+											</Node>
+										</Node>
+										<Node score="0.051177986">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.021669485">
+												<SimplePredicate field="f1" operator="lessThan" value="0.9"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.09199061">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+											<Node score="-0.02109482">
+												<SimplePredicate field="f0" operator="lessThan" value="0.81"/>
+											</Node>
+										</Node>
+										<Node score="-0.075165965">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+									<Node score="0.007178618">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="22">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.093442366">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.08755057">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.018878466">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="235.0"/>
+												</Node>
+											</Node>
+											<Node score="0.09212222">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+											</Node>
+										</Node>
+										<Node score="0.085502535">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.06786699">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.08331186">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.07882203">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.014364245">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.07789599">
+													<SimplePredicate field="f3" operator="lessThan" value="253.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="0.048800137">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.069354154">
+												<SimplePredicate field="f3" operator="lessThan" value="131.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.03925321">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.08932488">
+											<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											<Node score="0.011085825">
+												<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+										</Node>
+									</Node>
+									<Node score="0.078158304">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.08309191">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="23">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+								</MiningSchema>
+								<Node score="0.06277099">
+									<True/>
+									<Node score="0.08949352">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.08642223">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.08950706">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+										</Node>
+										<Node score="0.065127194">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.06605274">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										<Node score="-0.0048529436">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.07691076">
+												<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												<Node score="-0.053231116">
+													<SimplePredicate field="f3" operator="lessThan" value="252.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.098419316">
+												<SimplePredicate field="f3" operator="lessThan" value="281.0"/>
+											</Node>
+										</Node>
+										<Node score="0.022427466">
+											<SimplePredicate field="f3" operator="lessThan" value="258.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.7"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+										<Node score="0.0022232467">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.03238104">
+											<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+										</Node>
+									</Node>
+									<Node score="-0.0015090125">
+										<SimplePredicate field="f3" operator="lessThan" value="219.0"/>
+										<Node score="-0.075963855">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.050383687">
+										<SimplePredicate field="f0" operator="lessThan" value="0.71"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="24">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="-0.023950273">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.09148558">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												<Node score="-0.03793181">
+													<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+										<Node score="0.0808744">
+											<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+										</Node>
+									</Node>
+									<Node score="-0.04188502">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+												<Node score="-0.044822183">
+													<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												</Node>
+											</Node>
+											<Node score="-0.07084772">
+												<SimplePredicate field="f1" operator="lessThan" value="0.91"/>
+											</Node>
+										</Node>
+										<Node score="0.013481246">
+											<SimplePredicate field="f0" operator="lessThan" value="0.74"/>
+											<Node score="-0.062676795">
+												<SimplePredicate field="f3" operator="lessThan" value="248.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.09862661">
+											<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.025336415">
+											<SimplePredicate field="f3" operator="lessThan" value="216.0"/>
+											<Node score="-0.09634032">
+												<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+											</Node>
+										</Node>
+										<Node score="0.064473614">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="25">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.061869513">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.06398746">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="-0.09558835">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												<Node score="-0.033678055">
+													<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.09856493">
+												<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+												<Node score="-0.03662188">
+													<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												</Node>
+											</Node>
+											<Node score="-0.071559034">
+												<SimplePredicate field="f1" operator="lessThan" value="0.91"/>
+											</Node>
+										</Node>
+										<Node score="-0.028835628">
+											<SimplePredicate field="f0" operator="lessThan" value="0.85"/>
+											<Node score="-0.09182747">
+												<SimplePredicate field="f3" operator="lessThan" value="156.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.025220701">
+											<SimplePredicate field="f3" operator="lessThan" value="155.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="0.06285535">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+											<Node score="-0.06739425">
+												<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="26">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.093651794">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.07095939">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.015444887">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="0.08018182">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.026921174">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.07045325">
+												<SimplePredicate field="f0" operator="lessThan" value="0.27"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.072843954">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.07574172">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="-0.036627617">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.09313718">
+													<SimplePredicate field="f0" operator="lessThan" value="0.61"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="0.06751113">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.0">
+												<SimplePredicate field="f0" operator="lessThan" value="0.68"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.08267915">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.09723247">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+											<Node score="-8.803547E-5">
+												<SimplePredicate field="f0" operator="lessThan" value="0.81"/>
+											</Node>
+										</Node>
+										<Node score="-0.07088485">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="0.011642853">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="27">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.08932381">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.021673989">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.08222272">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="-0.09952102">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.024207104">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.07517875">
+												<SimplePredicate field="f0" operator="lessThan" value="0.27"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.09689314">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.0106582595">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="0.036846288">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.07780421">
+													<SimplePredicate field="f1" operator="lessThan" value="0.78"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+										<Node score="0.056033235">
+											<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										</Node>
+										<Node score="-0.048185535">
+											<SimplePredicate field="f0" operator="lessThan" value="0.85"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="0.05589164">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+											<Node score="-0.05779494">
+												<SimplePredicate field="f0" operator="lessThan" value="0.72"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="28">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.09816346">
+									<True/>
+									<Node score="0.08125131">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.0733647">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.010235818">
+												<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												<Node score="-0.09092697">
+													<SimplePredicate field="f3" operator="lessThan" value="243.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="122.0"/>
+											</Node>
+										</Node>
+										<Node score="0.085375026">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.048474275">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.086865894">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.07004299">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.019541558">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.07014092">
+													<SimplePredicate field="f3" operator="lessThan" value="253.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.09790507">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.058094483">
+											<SimplePredicate field="f0" operator="lessThan" value="0.74"/>
+											<Node score="0.06764105">
+												<SimplePredicate field="f3" operator="lessThan" value="266.0"/>
+											</Node>
+										</Node>
+										<Node score="0.024487915">
+											<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+										</Node>
+									</Node>
+									<Node score="0.07032611">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+										</Node>
+										<Node score="-0.06775584">
+											<SimplePredicate field="f0" operator="lessThan" value="0.66"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="0.002544155">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="29">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.096679844">
+									<True/>
+									<Node score="0.08533741">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.03361275">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+												<Node score="0.078388624">
+													<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.09570913">
+												<SimplePredicate field="f3" operator="lessThan" value="198.0"/>
+											</Node>
+										</Node>
+										<Node score="0.081750505">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.04753677">
+												<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.058760084">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.022562794">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="-0.0045321602">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												<Node score="-0.09511491">
+													<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.075057015">
+												<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.0885683">
+											<SimplePredicate field="f3" operator="lessThan" value="252.0"/>
+											<Node score="-0.0">
+												<SimplePredicate field="f3" operator="lessThan" value="190.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="266.0"/>
+										</Node>
+									</Node>
+									<Node score="0.06280082">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.09802022">
+											<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+										</Node>
+										<Node score="-0.06971934">
+											<SimplePredicate field="f0" operator="lessThan" value="0.66"/>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										<Node score="-0.030959183">
+											<SimplePredicate field="f0" operator="lessThan" value="0.58"/>
+										</Node>
+									</Node>
+									<Node score="0.0063431524">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="30">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="-0.09789332">
+										<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											<Node score="0.07415476">
+												<SimplePredicate field="f3" operator="lessThan" value="162.0"/>
+												<Node score="-0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+												</Node>
+												<Node score="-0.09538653">
+													<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+											<Node score="0.008504461">
+												<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+												<Node score="-0.06212851">
+													<SimplePredicate field="f3" operator="lessThan" value="247.0"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="0.030930817">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.0242673">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+												<Node score="-0.09065397">
+													<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.07196862">
+												<SimplePredicate field="f1" operator="lessThan" value="0.74"/>
+											</Node>
+										</Node>
+										<Node score="-0.04026583">
+											<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+											<Node score="-0.08753602">
+												<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+											</Node>
+										</Node>
+										<Node score="0.030339021">
+											<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="31">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f6"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.052204978">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.08076512">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="-0.03910343">
+												<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+												<Node score="0.1">
+													<SimplePredicate field="f3" operator="lessThan" value="176.0"/>
+												</Node>
+											</Node>
+											<Node score="0.008783129">
+												<SimplePredicate field="f1" operator="lessThan" value="0.47"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+									</Node>
+									<Node score="-0.08078101">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.03901054">
+												<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+												<Node score="-0.08976709">
+													<SimplePredicate field="f6" operator="lessThan" value="1.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.05247105">
+												<SimplePredicate field="f1" operator="lessThan" value="0.91"/>
+											</Node>
+										</Node>
+										<Node score="0.050296176">
+											<SimplePredicate field="f3" operator="lessThan" value="183.0"/>
+											<Node score="-0.07548703">
+												<SimplePredicate field="f3" operator="lessThan" value="154.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.020863704">
+											<SimplePredicate field="f0" operator="lessThan" value="0.63"/>
+										</Node>
+									</Node>
+									<Node score="-0.0911873">
+										<SimplePredicate field="f3" operator="lessThan" value="216.0"/>
+										<Node score="-0.07105127">
+											<SimplePredicate field="f0" operator="lessThan" value="0.74"/>
+											<Node score="0.017549036">
+												<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.061040986">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.08561034">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="32">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.049772512">
+										<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.08751947">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="0.067449994">
+												<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												<Node score="-0.037684415">
+													<SimplePredicate field="f1" operator="lessThan" value="0.61"/>
+												</Node>
+											</Node>
+											<Node score="-0.0041780784">
+												<SimplePredicate field="f3" operator="lessThan" value="139.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+									</Node>
+									<Node score="-0.098218456">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="0.036566626">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.08767845">
+												<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+												<Node score="-0.033674154">
+													<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+												</Node>
+											</Node>
+											<Node score="-0.066094875">
+												<SimplePredicate field="f1" operator="lessThan" value="0.69"/>
+											</Node>
+										</Node>
+										<Node score="0.049164794">
+											<SimplePredicate field="f0" operator="lessThan" value="0.85"/>
+											<Node score="-0.041993886">
+												<SimplePredicate field="f0" operator="lessThan" value="0.81"/>
+											</Node>
+										</Node>
+										<Node score="-7.793053E-4">
+											<SimplePredicate field="f3" operator="lessThan" value="139.0"/>
+										</Node>
+									</Node>
+									<Node score="0.023054173">
+										<SimplePredicate field="f3" operator="lessThan" value="217.0"/>
+										<Node score="-0.092263766">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+											<Node score="-0.036340278">
+												<SimplePredicate field="f1" operator="lessThan" value="0.66"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.02733389">
+										<SimplePredicate field="f0" operator="lessThan" value="0.71"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="273.0"/>
+										</Node>
+									</Node>
+									<Node score="0.05605023">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="33">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="-0.060795933">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.099426955">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.060960967">
+											<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+											<Node score="-0.090339415">
+												<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+											</Node>
+										</Node>
+										<Node score="0.09031694">
+											<SimplePredicate field="f1" operator="lessThan" value="0.99"/>
+											<Node score="-0.051906224">
+												<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										</Node>
+									</Node>
+									<Node score="0.08178462">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="-0.0">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.048121836">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.058882322">
+													<SimplePredicate field="f3" operator="lessThan" value="240.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.09264186">
+												<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.06379247">
+											<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+										</Node>
+										<Node score="0.002386592">
+											<SimplePredicate field="f0" operator="lessThan" value="0.64"/>
+										</Node>
+									</Node>
+									<Node score="-0.046074785">
+										<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										<Node score="-0.0887531">
+											<SimplePredicate field="f3" operator="lessThan" value="263.0"/>
+											<Node score="-0.03836454">
+												<SimplePredicate field="f3" operator="lessThan" value="181.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.62"/>
+										</Node>
+									</Node>
+									<Node score="0.048784144">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.046193335">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="34">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.044535253">
+										<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										<Node score="0.098653585">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.08284852">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="-0.079978205">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												<Node score="-0.013977142">
+													<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.09657919">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+									</Node>
+									<Node score="0.097089075">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="-0.098439075">
+											<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+											<Node score="0.017130973">
+												<SimplePredicate field="f0" operator="lessThan" value="0.86"/>
+												<Node score="-0.07875308">
+													<SimplePredicate field="f0" operator="lessThan" value="0.85"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.050602734">
+											<SimplePredicate field="f1" operator="lessThan" value="0.91"/>
+										</Node>
+									</Node>
+									<Node score="-0.09503271">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.011221993">
+											<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+											<Node score="-0.088122524">
+												<SimplePredicate field="f0" operator="lessThan" value="0.89"/>
+											</Node>
+										</Node>
+										<Node score="0.020442314">
+											<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="35">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.09748099">
+										<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+										<Node score="-0.015705062">
+											<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											<Node score="-0.091884956">
+												<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+											</Node>
+											<Node score="0.06448057">
+												<SimplePredicate field="f1" operator="lessThan" value="0.59"/>
+											</Node>
+										</Node>
+										<Node score="-0.060677852">
+											<SimplePredicate field="f3" operator="lessThan" value="157.0"/>
+											<Node score="0.015017963">
+												<SimplePredicate field="f1" operator="lessThan" value="0.56"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="6.452904E-4">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="0.047463413">
+											<SimplePredicate field="f0" operator="lessThan" value="0.37"/>
+											<Node score="-0.040182397">
+												<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											</Node>
+										</Node>
+										<Node score="-0.0864579">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+										</Node>
+									</Node>
+									<Node score="0.023288442">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.03680421">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="36">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.08938368">
+									<True/>
+									<Node score="-0.015216588">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.039680477">
+											<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+											<Node score="0.010554357">
+												<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+												<Node score="0.04752764">
+													<SimplePredicate field="f1" operator="lessThan" value="0.62"/>
+													<Node score="-0.03010485">
+														<SimplePredicate field="f0" operator="lessThan" value="0.14"/>
+													</Node>
+												</Node>
+												<Node score="0.1">
+													<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+												</Node>
+											</Node>
+											<Node score="0.05320094">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.07222842">
+													<SimplePredicate field="f0" operator="lessThan" value="0.36"/>
+												</Node>
+											</Node>
+											<Node score="-0.033532474">
+												<SimplePredicate field="f1" operator="lessThan" value="0.95"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.47"/>
+										</Node>
+									</Node>
+									<Node score="-0.063043125">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.059157204">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.016145712">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.071913145">
+													<SimplePredicate field="f0" operator="lessThan" value="0.63"/>
+												</Node>
+											</Node>
+											<Node score="-0.08604745">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="0.08373101">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="0.0014966516">
+												<SimplePredicate field="f1" operator="lessThan" value="0.62"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+										<Node score="-0.0641637">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.061643172">
+												<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="0.004002319">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="37">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.036874563">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.09574638">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="0.060382303">
+											<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											<Node score="-0.1">
+												<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+											</Node>
+											<Node score="-0.050861545">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.0043436373">
+											<SimplePredicate field="f3" operator="lessThan" value="198.0"/>
+											<Node score="-0.09446672">
+												<SimplePredicate field="f1" operator="lessThan" value="0.87"/>
+											</Node>
+										</Node>
+										<Node score="-0.06361549">
+											<SimplePredicate field="f0" operator="lessThan" value="0.25"/>
+										</Node>
+									</Node>
+									<Node score="0.09437581">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="0.086911164">
+											<SimplePredicate field="f3" operator="lessThan" value="275.0"/>
+											<Node score="-0.08707821">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+												<Node score="-0.04470692">
+													<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.041116502">
+												<SimplePredicate field="f1" operator="lessThan" value="0.9"/>
+											</Node>
+										</Node>
+										<Node score="-0.038544726">
+											<SimplePredicate field="f1" operator="lessThan" value="0.91"/>
+										</Node>
+									</Node>
+									<Node score="0.040688153">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="0.03452159">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+											<Node score="-0.053356577">
+												<SimplePredicate field="f3" operator="lessThan" value="263.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.062205266">
+											<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="38">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.09341308">
+									<True/>
+									<Node score="0.036322948">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.094865076">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.08661956">
+											<SimplePredicate field="f0" operator="lessThan" value="0.31"/>
+											<Node score="-0.030331144">
+												<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												<Node score="0.068457454">
+													<SimplePredicate field="f0" operator="lessThan" value="0.16"/>
+												</Node>
+											</Node>
+											<Node score="0.014055766">
+												<SimplePredicate field="f0" operator="lessThan" value="0.14"/>
+											</Node>
+										</Node>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+										<Node score="-0.09224289">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+									</Node>
+									<Node score="-0.05968782">
+										<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										<Node score="-0.045198645">
+											<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											<Node score="0.06624797">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.05151364">
+													<SimplePredicate field="f3" operator="lessThan" value="240.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.08491412">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.056785345">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="0.05567628">
+												<SimplePredicate field="f3" operator="lessThan" value="266.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+											<Node score="0.034760635">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="39">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.003300918">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										<Node score="-0.09441057">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="0.04292434">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.0888146">
+													<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+												</Node>
+												<Node score="-0.08446678">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+											</Node>
+											<Node score="0.08116118">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												<Node score="-0.06194032">
+													<SimplePredicate field="f3" operator="lessThan" value="287.0"/>
+												</Node>
+											</Node>
+											<Node score="0.0044944207">
+												<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.028033763">
+										<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f2" operator="lessThan" value="5.0"/>
+											<Node score="-0.08673485">
+												<SimplePredicate field="f3" operator="lessThan" value="159.0"/>
+												<Node score="-0.028455246">
+													<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.08801945">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											<Node score="-0.004505318">
+												<SimplePredicate field="f3" operator="lessThan" value="136.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.035825595">
+											<SimplePredicate field="f1" operator="lessThan" value="0.94"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="40">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.05848102">
+									<True/>
+									<Node score="-0.1">
+										<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										<Node score="0.097578995">
+											<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+											<Node score="0.09287736">
+												<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+											</Node>
+											<Node score="-0.009386242">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												<Node score="-0.098613374">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+											</Node>
+											<Node score="0.0059399037">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+										<Node score="0.008208373">
+											<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+											<Node score="-0.069613464">
+												<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.042091813">
+										<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+										<Node score="-0.0049499567">
+											<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											<Node score="-0.07770687">
+												<SimplePredicate field="f3" operator="lessThan" value="153.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.089837044">
+										<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+									</Node>
+									<Node score="0.058275163">
+										<SimplePredicate field="f0" operator="lessThan" value="0.9"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="41">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.0056044753">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										<Node score="0.0049335314">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="-0.097893246">
+												<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+											</Node>
+											<Node score="-0.040494822">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="0.045946393">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.050692137">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="0.1">
+										<SimplePredicate field="f3" operator="lessThan" value="159.0"/>
+										<Node score="-0.0817827">
+											<SimplePredicate field="f3" operator="lessThan" value="156.0"/>
+											<Node score="-0.050911583">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="0.011939216">
+													<SimplePredicate field="f1" operator="lessThan" value="0.55"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="-0.090674855">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="-0.07148748">
+										<SimplePredicate field="f1" operator="lessThan" value="0.78"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="42">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="0.1">
+									<True/>
+									<Node score="-0.0060602673">
+										<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+										<Node score="0.09415136">
+											<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											<Node score="-0.004008598">
+												<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+												<Node score="-0.042343">
+													<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+													<Node score="0.04354522">
+														<SimplePredicate field="f1" operator="lessThan" value="0.59"/>
+													</Node>
+												</Node>
+												<Node score="-0.055977453">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="0.01859224">
+												<SimplePredicate field="f3" operator="lessThan" value="187.0"/>
+											</Node>
+										</Node>
+										<Node score="0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="159.0"/>
+											<Node score="-0.07991537">
+												<SimplePredicate field="f3" operator="lessThan" value="156.0"/>
+												<Node score="-0.007890906">
+													<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.060460594">
+											<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+											<Node score="-0.09901377">
+												<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="43">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.0329896">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										<Node score="-0.1">
+											<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+										</Node>
+										<Node score="0.004185652">
+											<SimplePredicate field="f2" operator="lessThan" value="7.0"/>
+											<Node score="0.034749255">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												<Node score="-0.081836894">
+													<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+												</Node>
+											</Node>
+											<Node score="-0.046554185">
+												<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.1">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+										<Node score="-0.07969973">
+											<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											<Node score="-0.0076414864">
+												<SimplePredicate field="f1" operator="lessThan" value="0.56"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.09174564">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="-0.078264035">
+										<SimplePredicate field="f1" operator="lessThan" value="0.62"/>
+									</Node>
+									<Node score="0.056110185">
+										<SimplePredicate field="f1" operator="lessThan" value="0.89"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="44">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="-0.030043704">
+										<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+										<Node score="0.09533951">
+											<SimplePredicate field="f0" operator="lessThan" value="0.13"/>
+											<Node score="0.0013010512">
+												<SimplePredicate field="f1" operator="lessThan" value="0.78"/>
+											</Node>
+										</Node>
+										<Node score="-0.08897842">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+										<Node score="0.051996734">
+											<SimplePredicate field="f1" operator="lessThan" value="0.58"/>
+											<Node score="-0.049070023">
+												<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+											</Node>
+										</Node>
+										<Node score="0.046367504">
+											<SimplePredicate field="f4" operator="lessThan" value="3.0"/>
+										</Node>
+									</Node>
+									<Node score="0.034877654">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="0.09382614">
+											<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+											<Node score="-0.07150859">
+												<SimplePredicate field="f2" operator="lessThan" value="6.0"/>
+												<Node score="0.004101647">
+													<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.051718976">
+												<SimplePredicate field="f1" operator="lessThan" value="0.62"/>
+											</Node>
+										</Node>
+										<Node score="-0.07526028">
+											<SimplePredicate field="f0" operator="lessThan" value="0.7"/>
+											<Node score="-0.028709551">
+												<SimplePredicate field="f1" operator="lessThan" value="0.84"/>
+											</Node>
+										</Node>
+										<Node score="-0.04055588">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="45">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.053759165">
+										<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+										<Node score="0.07889719">
+											<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+											<Node score="0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+												<Node score="-0.0">
+													<SimplePredicate field="f1" operator="lessThan" value="0.61"/>
+												</Node>
+											</Node>
+											<Node score="-0.05523897">
+												<SimplePredicate field="f3" operator="lessThan" value="276.0"/>
+												<Node score="-0.0012284794">
+													<SimplePredicate field="f1" operator="lessThan" value="0.66"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.010871263">
+											<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											<Node score="-0.098105475">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+											<Node score="0.03219827">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.09971268">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.054765422">
+												<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											</Node>
+										</Node>
+										<Node score="-0.07300703">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										</Node>
+									</Node>
+									<Node score="0.019444788">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.070437625">
+											<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="46">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+								</MiningSchema>
+								<Node score="-0.1">
+									<True/>
+									<Node score="0.08667874">
+										<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+										<Node score="0.090010636">
+											<SimplePredicate field="f0" operator="lessThan" value="0.12"/>
+										</Node>
+										<Node score="-0.09616759">
+											<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+										</Node>
+										<Node score="-0.018390639">
+											<SimplePredicate field="f3" operator="lessThan" value="140.0"/>
+											<Node score="0.078412585">
+												<SimplePredicate field="f0" operator="lessThan" value="0.48"/>
+											</Node>
+										</Node>
+										<Node score="-0.017369395">
+											<SimplePredicate field="f1" operator="lessThan" value="1.0"/>
+										</Node>
+									</Node>
+									<Node score="-0.0023735256">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.06191202">
+											<SimplePredicate field="f3" operator="lessThan" value="240.0"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="47">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.095504165">
+									<True/>
+									<Node score="-0.09354486">
+										<SimplePredicate field="f0" operator="lessThan" value="0.92"/>
+										<Node score="0.056937065">
+											<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+											<Node score="0.1">
+												<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+												<Node score="-0.0">
+													<SimplePredicate field="f1" operator="lessThan" value="0.61"/>
+												</Node>
+												<Node score="0.01785846">
+													<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.051816583">
+												<SimplePredicate field="f3" operator="lessThan" value="274.0"/>
+												<Node score="-0.0">
+													<SimplePredicate field="f1" operator="lessThan" value="0.68"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="-0.0964277">
+											<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+										</Node>
+										<Node score="-0.0013017564">
+											<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+											<Node score="-0.09590259">
+												<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="48">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.09901149">
+									<True/>
+									<Node score="0.034397345">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.0">
+											<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+											<Node score="0.011976797">
+												<SimplePredicate field="f3" operator="lessThan" value="248.0"/>
+												<Node score="0.019270064">
+													<SimplePredicate field="f0" operator="lessThan" value="0.49"/>
+													<Node score="-0.08471974">
+														<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+													</Node>
+												</Node>
+												<Node score="-0.047684755">
+													<SimplePredicate field="f4" operator="lessThan" value="5.0"/>
+												</Node>
+											</Node>
+											<Node score="0.06580054">
+												<SimplePredicate field="f4" operator="lessThan" value="6.0"/>
+												<Node score="-1.5783566E-4">
+													<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+												</Node>
+											</Node>
+											<Node score="-0.07737062">
+												<SimplePredicate field="f0" operator="lessThan" value="0.53"/>
+											</Node>
+										</Node>
+										<Node score="0.059342086">
+											<SimplePredicate field="f0" operator="lessThan" value="0.15"/>
+										</Node>
+										<Node score="-0.092495434">
+											<SimplePredicate field="f0" operator="lessThan" value="0.82"/>
+											<Node score="-0.048262056">
+												<SimplePredicate field="f1" operator="lessThan" value="0.63"/>
+											</Node>
+										</Node>
+										<Node score="-0.069833666">
+											<SimplePredicate field="f1" operator="lessThan" value="0.81"/>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="49">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f1"/>
+									<MiningField name="f2"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+									<MiningField name="f5"/>
+								</MiningSchema>
+								<Node score="-0.04759417">
+									<True/>
+									<Node score="-0.09583706">
+										<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+									</Node>
+									<Node score="-0.09101908">
+										<SimplePredicate field="f5" operator="lessThan" value="1.0"/>
+										<Node score="9.659294E-4">
+											<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+											<Node score="-0.08524773">
+												<SimplePredicate field="f3" operator="lessThan" value="127.0"/>
+											</Node>
+											<Node score="0.061271638">
+												<SimplePredicate field="f3" operator="lessThan" value="140.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.097231">
+										<SimplePredicate field="f4" operator="lessThan" value="4.0"/>
+										<Node score="-0.07408475">
+											<SimplePredicate field="f3" operator="lessThan" value="161.0"/>
+											<Node score="0.01568739">
+												<SimplePredicate field="f2" operator="lessThan" value="3.0"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="-0.087742545">
+										<SimplePredicate field="f2" operator="lessThan" value="4.0"/>
+									</Node>
+									<Node score="0.039258417">
+										<SimplePredicate field="f3" operator="lessThan" value="241.0"/>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+						<Segment id="50">
+							<True/>
+							<TreeModel functionName="regression" noTrueChildStrategy="returnLastPrediction" x-mathContext="float">
+								<MiningSchema>
+									<MiningField name="f0"/>
+									<MiningField name="f1"/>
+									<MiningField name="f3"/>
+									<MiningField name="f4"/>
+								</MiningSchema>
+								<Node score="-0.09789871">
+									<True/>
+									<Node score="0.1">
+										<SimplePredicate field="f0" operator="lessThan" value="0.93"/>
+										<Node score="-0.08945357">
+											<SimplePredicate field="f3" operator="lessThan" value="288.0"/>
+											<Node score="-0.093642">
+												<SimplePredicate field="f1" operator="lessThan" value="0.45"/>
+											</Node>
+											<Node score="-0.0013053161">
+												<SimplePredicate field="f4" operator="lessThan" value="7.0"/>
+												<Node score="-0.09092239">
+													<SimplePredicate field="f3" operator="lessThan" value="126.0"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</TreeModel>
+						</Segment>
+					</Segmentation>
+				</MiningModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<RegressionModel functionName="classification" normalizationMethod="logit" x-mathContext="float">
+					<MiningSchema>
+						<MiningField name="left" usageType="target"/>
+						<MiningField name="xgbValue"/>
+					</MiningSchema>
+					<Output>
+						<OutputField name="probability(0)" optype="continuous" dataType="float" feature="probability" value="0"/>
+						<OutputField name="probability(1)" optype="continuous" dataType="float" feature="probability" value="1"/>
+					</Output>
+					<RegressionTable intercept="0.0" targetCategory="1">
+						<NumericPredictor name="xgbValue" coefficient="1.0"/>
+					</RegressionTable>
+					<RegressionTable intercept="0.0" targetCategory="0"/>
+				</RegressionModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>

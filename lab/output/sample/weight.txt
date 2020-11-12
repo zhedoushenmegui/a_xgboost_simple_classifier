@@ -1,0 +1,7 @@
+satisfaction_level: 221
+average_montly_hours: 209
+last_evaluation: 165
+time_spend_company: 127
+number_project: 118
+Work_accident: 13
+promotion_last_5years: 1

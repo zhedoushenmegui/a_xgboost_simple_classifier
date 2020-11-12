@@ -1,0 +1,1808 @@
+booster[0]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=1042.19995,cover=1891.75
+	1:[number_project<3] yes=3,no=4,missing=4,gain=407.930145,cover=531
+		3:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=128.799988,cover=222.25
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=36.7999878,cover=204
+				17:leaf=-0.100000001,cover=4.75
+				18:[satisfaction_level<0.360000014] yes=19,no=20,missing=20,gain=20.7999878,cover=199.25
+					19:leaf=-0.100000001,cover=4.25
+					20:leaf=0.100000001,cover=195
+			14:leaf=-0.100000001,cover=18.25
+		4:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=758.269775,cover=308.75
+			5:leaf=0.100000001,cover=109.25
+			6:[number_project<7] yes=21,no=22,missing=22,gain=10.7999878,cover=199.5
+				21:[last_evaluation<1] yes=23,no=24,missing=24,gain=2.5,cover=198
+					23:leaf=-0.100000001,cover=195.5
+					24:leaf=-0,cover=2.5
+				22:leaf=0.100000001,cover=1.5
+	2:[time_spend_company<5] yes=7,no=8,missing=8,gain=167.453613,cover=1360.75
+		7:leaf=-0.100000001,cover=1110.5
+		8:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=336.709503,cover=250.25
+			9:leaf=-0.100000001,cover=94.25
+			10:[time_spend_company<7] yes=11,no=12,missing=12,gain=178.236877,cover=156
+				11:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=66.8000031,cover=132.75
+					15:leaf=-0.100000001,cover=11.5
+					16:leaf=0.100000001,cover=121.25
+				12:leaf=-0.100000001,cover=23.25
+booster[1]:
+0:[number_project<3] yes=1,no=2,missing=2,gain=755.330444,cover=1884.29236
+	1:[last_evaluation<0.579999983] yes=3,no=4,missing=4,gain=432.224182,cover=302.991913
+		3:[average_montly_hours<162] yes=9,no=10,missing=10,gain=125.905731,cover=228.179077
+			9:[average_montly_hours<126] yes=17,no=18,missing=18,gain=56.6018372,cover=208.478378
+				17:leaf=-0.100000001,cover=7.48128176
+				18:[last_evaluation<0.449999988] yes=21,no=22,missing=22,gain=29.201355,cover=200.997086
+					21:leaf=-0.100000001,cover=3.99001694
+					22:leaf=0.100000001,cover=197.00708
+			10:leaf=-0.100000001,cover=19.7007084
+		4:[average_montly_hours<276] yes=31,no=32,missing=32,gain=4.4143219,cover=74.8128204
+			31:leaf=-0.100000001,cover=72.0696793
+			32:[average_montly_hours<283] yes=33,no=34,missing=34,gain=0.35359937,cover=2.74313664
+				33:leaf=0.0420579948,cover=1.49625635
+				34:leaf=-0.0122438176,cover=1.24688029
+	2:[number_project<6] yes=5,no=6,missing=6,gain=388.710449,cover=1581.30042
+		5:[time_spend_company<5] yes=11,no=12,missing=12,gain=123.802002,cover=1397.26025
+			11:[average_montly_hours<287] yes=23,no=24,missing=24,gain=19.199707,cover=1109.22913
+				23:leaf=-0.100000001,cover=1106.23657
+				24:leaf=0.100000001,cover=2.9925127
+			12:[last_evaluation<0.819999993] yes=13,no=14,missing=14,gain=306.384399,cover=288.031219
+				13:leaf=-0.100000001,cover=116.957375
+				14:[average_montly_hours<215] yes=15,no=16,missing=16,gain=240.844803,cover=171.073837
+					15:leaf=-0.100000001,cover=36.4107742
+					16:leaf=0.100000001,cover=134.663071
+		6:[average_montly_hours<242] yes=7,no=8,missing=8,gain=317.119263,cover=184.040146
+			7:[number_project<7] yes=27,no=28,missing=28,gain=10.2005005,cover=62.3446388
+				27:leaf=-0.100000001,cover=60.848381
+				28:leaf=0.100000001,cover=1.49625623
+			8:[last_evaluation<0.769999981] yes=19,no=20,missing=20,gain=49.1030731,cover=121.695511
+				19:[average_montly_hours<287] yes=29,no=30,missing=30,gain=5.03839207,cover=10.7231703
+					29:leaf=-0.100000001,cover=9.47628975
+					30:leaf=0.0611968935,cover=1.24688029
+				20:[time_spend_company<6] yes=25,no=26,missing=26,gain=10.22052,cover=110.972343
+					25:leaf=0.100000001,cover=108.977333
+					26:leaf=-0.0918236077,cover=1.99500847
+booster[2]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=1008.94348,cover=1860.89746
+	1:[time_spend_company<5] yes=3,no=4,missing=4,gain=339.036987,cover=523.235291
+		3:[time_spend_company<3] yes=9,no=10,missing=10,gain=186.146149,cover=422.639587
+			9:[satisfaction_level<0.150000006] yes=23,no=24,missing=24,gain=4.51679993,cover=34.6740494
+				23:leaf=0.0461962484,cover=1.48758292
+				24:[last_evaluation<0.939999998] yes=27,no=28,missing=28,gain=0.240409851,cover=33.1864662
+					27:leaf=-0.100000001,cover=30.9519901
+					28:leaf=-0.033267118,cover=2.23447561
+			10:[average_montly_hours<126] yes=13,no=14,missing=14,gain=89.7163696,cover=387.965515
+				13:leaf=-0.100000001,cover=12.3876228
+				14:[last_evaluation<0.449999988] yes=19,no=20,missing=20,gain=61.8232422,cover=375.577911
+					19:leaf=-0.100000001,cover=8.66308022
+					20:leaf=0.100000001,cover=366.914825
+		4:[satisfaction_level<0.119999997] yes=15,no=16,missing=16,gain=81.8683624,cover=100.595703
+			15:leaf=0.100000001,cover=11.3891125
+			16:leaf=-0.100000001,cover=89.2065887
+	2:[time_spend_company<5] yes=5,no=6,missing=6,gain=192.98291,cover=1337.66223
+		5:[average_montly_hours<287] yes=21,no=22,missing=22,gain=5.3034668,cover=1089.90283
+			21:leaf=-0.100000001,cover=1088.65442
+			22:leaf=0.0647591501,cover=1.24842846
+		6:[last_evaluation<0.819999993] yes=7,no=8,missing=8,gain=293.682404,cover=247.759369
+			7:leaf=-0.100000001,cover=93.068718
+			8:[average_montly_hours<217] yes=11,no=12,missing=12,gain=168.328552,cover=154.690643
+				11:[last_evaluation<0.99000001] yes=25,no=26,missing=26,gain=3.51161194,cover=28.8112602
+					25:leaf=-0.100000001,cover=26.5761604
+					26:leaf=0.0154452166,cover=2.23509955
+				12:[time_spend_company<7] yes=17,no=18,missing=18,gain=62.7999878,cover=125.879379
+					17:leaf=0.100000001,cover=117.879379
+					18:leaf=-0.100000001,cover=8
+booster[3]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=931.36499,cover=1860.51306
+	1:[number_project<3] yes=3,no=4,missing=4,gain=319.839203,cover=521.9104
+		3:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=108.794006,cover=220.299118
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=36.2490845,cover=202.514755
+				17:leaf=-0.100000001,cover=5.37808323
+				18:[average_montly_hours<126] yes=19,no=20,missing=20,gain=17.0094299,cover=197.136673
+					19:leaf=-0.100000001,cover=2.47408962
+					20:leaf=0.100000001,cover=194.662582
+			14:[average_montly_hours<265] yes=27,no=28,missing=28,gain=2.66859436,cover=17.784359
+				27:leaf=-0.100000001,cover=16.5409927
+				28:leaf=0.0243444983,cover=1.24336576
+		4:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=613.217041,cover=301.611298
+			5:leaf=0.100000001,cover=106.891762
+			6:[average_montly_hours<288] yes=21,no=22,missing=22,gain=14.6368713,cover=194.719543
+				21:[number_project<7] yes=23,no=24,missing=24,gain=9.80477905,cover=192.730026
+					23:leaf=-0.100000001,cover=191.243607
+					24:leaf=0.100000001,cover=1.48642087
+				22:leaf=0.100000001,cover=1.98951435
+	2:[time_spend_company<5] yes=7,no=8,missing=8,gain=188.026123,cover=1338.60266
+		7:[satisfaction_level<0.479999989] yes=33,no=34,missing=34,gain=0.427490234,cover=1091.67053
+			33:[number_project<4] yes=35,no=36,missing=36,gain=2.43900251,cover=3.19271135
+				35:leaf=-0.100000001,cover=1.48150313
+				36:leaf=0.0339736901,cover=1.71120822
+			34:leaf=-0.100000001,cover=1088.47778
+		8:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=257.975739,cover=246.932129
+			9:[average_montly_hours<273] yes=29,no=30,missing=30,gain=1.41833496,cover=91.1878738
+				29:leaf=-0.100000001,cover=88.4988251
+				30:[average_montly_hours<282] yes=31,no=32,missing=32,gain=1.03305972,cover=2.68904161
+					31:leaf=0.0347484797,cover=1.22229159
+					32:leaf=-0.0589174032,cover=1.46674991
+			10:[average_montly_hours<217] yes=11,no=12,missing=12,gain=157.805878,cover=155.744263
+				11:[last_evaluation<0.99000001] yes=25,no=26,missing=26,gain=3.4328804,cover=29.0488911
+					25:leaf=-0.100000001,cover=26.8131599
+					26:leaf=0.0143751567,cover=2.23573089
+				12:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=68.7959137,cover=126.695374
+					15:leaf=-0.100000001,cover=10.2251301
+					16:leaf=0.100000001,cover=116.470245
+booster[4]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=882.552979,cover=1818.11133
+	1:[number_project<3] yes=3,no=4,missing=4,gain=293.824402,cover=513.544922
+		3:[last_evaluation<0.579999983] yes=7,no=8,missing=8,gain=109.737152,cover=218.64679
+			7:[last_evaluation<0.449999988] yes=11,no=12,missing=12,gain=34.1154785,cover=200.569183
+				11:leaf=-0.100000001,cover=5.28573656
+				12:[satisfaction_level<0.349999994] yes=17,no=18,missing=18,gain=16.4454041,cover=195.283447
+					17:leaf=-0.091234915,cover=3.71562099
+					18:leaf=0.100000001,cover=191.567825
+			8:[average_montly_hours<250] yes=31,no=32,missing=32,gain=0.71049881,cover=18.0776119
+				31:leaf=-0.100000001,cover=16.8421268
+				32:leaf=-0.00755410502,cover=1.2354852
+		4:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=557.124207,cover=294.898132
+			5:leaf=0.100000001,cover=103.201645
+			6:[average_montly_hours<288] yes=19,no=20,missing=20,gain=15.6427917,cover=191.696487
+				19:[number_project<7] yes=23,no=24,missing=24,gain=9.21313477,cover=189.466446
+					23:leaf=-0.100000001,cover=187.995865
+					24:leaf=0.100000001,cover=1.47058773
+				20:leaf=0.100000001,cover=2.23003864
+	2:[last_evaluation<1] yes=9,no=10,missing=10,gain=67.8395996,cover=1304.56641
+		9:[average_montly_hours<288] yes=21,no=22,missing=22,gain=12.8061523,cover=1271.60657
+			21:[last_evaluation<0.980000019] yes=27,no=28,missing=28,gain=1.66162109,cover=1269.87854
+				27:leaf=-0.100000001,cover=1211.6145
+				28:[number_project<5] yes=29,no=30,missing=30,gain=21.047821,cover=58.2639809
+					29:leaf=-0.100000001,cover=41.1586838
+					30:leaf=0.0168232899,cover=17.1052971
+			22:leaf=0.100000001,cover=1.72810268
+		10:[average_montly_hours<206] yes=13,no=14,missing=14,gain=27.4097061,cover=32.9598312
+			13:[satisfaction_level<0.600000024] yes=33,no=34,missing=34,gain=0.161398888,cover=7.70421982
+				33:[satisfaction_level<0.529999971] yes=35,no=36,missing=36,gain=1.15342438,cover=2.6587441
+					35:leaf=-0.086610578,cover=1.20130372
+					36:leaf=0.0154484212,cover=1.45744026
+				34:leaf=-0.100000001,cover=5.04547596
+			14:[satisfaction_level<0.709999979] yes=15,no=16,missing=16,gain=20.1050758,cover=25.2556133
+				15:leaf=-0.100000001,cover=3.14515734
+				16:[satisfaction_level<0.920000017] yes=25,no=26,missing=26,gain=4.77320862,cover=22.1104565
+					25:leaf=0.100000001,cover=20.909153
+					26:leaf=-0.0591155291,cover=1.20130372
+booster[5]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=814.276367,cover=1788.54187
+	1:[number_project<3] yes=3,no=4,missing=4,gain=258.411957,cover=501.06897
+		3:[last_evaluation<0.579999983] yes=7,no=8,missing=8,gain=101.863464,cover=210.110626
+			7:[last_evaluation<0.449999988] yes=11,no=12,missing=12,gain=30.5134277,cover=192.546448
+				11:leaf=-0.100000001,cover=4.93507767
+				12:[average_montly_hours<126] yes=15,no=16,missing=16,gain=16.4579468,cover=187.611374
+					15:leaf=-0.100000001,cover=2.44722819
+					16:leaf=0.100000001,cover=185.164139
+			8:[average_montly_hours<265] yes=29,no=30,missing=30,gain=2.61791611,cover=17.5641766
+				29:leaf=-0.100000001,cover=16.3196812
+				30:leaf=0.0234016757,cover=1.2444967
+		4:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=523.452515,cover=290.958344
+			5:leaf=0.100000001,cover=103.805634
+			6:[average_montly_hours<288] yes=19,no=20,missing=20,gain=13.052124,cover=187.15271
+				19:[number_project<7] yes=23,no=24,missing=24,gain=8.63259888,cover=185.186829
+					23:leaf=-0.100000001,cover=183.738983
+					24:leaf=0.0963016674,cover=1.44784069
+				20:leaf=0.100000001,cover=1.96589208
+	2:[last_evaluation<1] yes=9,no=10,missing=10,gain=71.1942139,cover=1287.4729
+		9:[average_montly_hours<288] yes=21,no=22,missing=22,gain=10.1799316,cover=1252.96667
+			21:[last_evaluation<0.850000024] yes=25,no=26,missing=26,gain=3.03601074,cover=1251.49243
+				25:leaf=-0.100000001,cover=859.426208
+				26:[average_montly_hours<226] yes=27,no=28,missing=28,gain=91.8005676,cover=392.066193
+					27:leaf=-0.100000001,cover=211.34726
+					28:leaf=-0.0268498808,cover=180.718918
+			22:leaf=0.100000001,cover=1.47435236
+		10:[average_montly_hours<206] yes=13,no=14,missing=14,gain=29.1494026,cover=34.5061951
+			13:[satisfaction_level<0.600000024] yes=31,no=32,missing=32,gain=0.245060921,cover=8.27985954
+				31:[satisfaction_level<0.529999971] yes=33,no=34,missing=34,gain=1.04655075,cover=2.63977003
+					33:leaf=-0.082772091,cover=1.17882836
+					34:leaf=0.0145104369,cover=1.46094167
+				32:leaf=-0.100000001,cover=5.64008904
+			14:[satisfaction_level<0.709999979] yes=17,no=18,missing=18,gain=15.886055,cover=26.2263374
+				17:leaf=-0.100000001,cover=2.61340475
+				18:leaf=0.100000001,cover=23.6129322
+booster[6]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=771.10144,cover=1757.66968
+	1:[number_project<3] yes=5,no=6,missing=6,gain=234.623444,cover=494.514771
+		5:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=97.9789734,cover=208.911102
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=28.5648804,cover=191.261658
+				17:leaf=-0.100000001,cover=4.80446911
+				18:[satisfaction_level<0.349999994] yes=19,no=20,missing=20,gain=14.4631653,cover=186.457184
+					19:leaf=-0.0757164806,cover=3.94333124
+					20:leaf=0.100000001,cover=182.513855
+			14:[average_montly_hours<265] yes=27,no=28,missing=28,gain=2.5476017,cover=17.6494408
+				27:leaf=-0.100000001,cover=16.403656
+				28:leaf=0.0220907629,cover=1.24578404
+		6:[satisfaction_level<0.119999997] yes=7,no=8,missing=8,gain=478.656677,cover=285.603668
+			7:leaf=0.100000001,cover=101.522049
+			8:[average_montly_hours<288] yes=21,no=22,missing=22,gain=10.6654053,cover=184.081635
+				21:[number_project<7] yes=23,no=24,missing=24,gain=8.09335327,cover=182.381943
+					23:leaf=-0.100000001,cover=180.962143
+					24:leaf=0.0917093828,cover=1.41980183
+				22:leaf=0.100000001,cover=1.69968677
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=249.144043,cover=1263.15491
+		3:[satisfaction_level<0.479999989] yes=29,no=30,missing=30,gain=1.0201416,cover=1025.22058
+			29:[average_montly_hours<227] yes=31,no=32,missing=32,gain=1.83471751,cover=3.2908814
+				31:leaf=-0.0741016269,cover=2.11448574
+				32:leaf=0.046105016,cover=1.17639565
+			30:[average_montly_hours<286] yes=33,no=34,missing=34,gain=0.274536133,cover=1021.92969
+				33:leaf=-0.100000001,cover=1019.55206
+				34:leaf=-0.0339247696,cover=2.37764931
+		4:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=233.952286,cover=237.934372
+			9:leaf=-0.100000001,cover=84.2913437
+			10:[average_montly_hours<217] yes=11,no=12,missing=12,gain=133.635559,cover=153.643021
+				11:[last_evaluation<0.99000001] yes=25,no=26,missing=26,gain=3.01299667,cover=27.7557373
+					25:leaf=-0.100000001,cover=26.0255127
+					26:leaf=0.0181773324,cover=1.73022377
+				12:[time_spend_company<7] yes=15,no=16,missing=16,gain=53.8521118,cover=125.887291
+					15:leaf=0.100000001,cover=118.063942
+					16:leaf=-0.100000001,cover=7.82334661
+booster[7]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=681.129089,cover=1695.05713
+	1:[time_spend_company<5] yes=7,no=8,missing=8,gain=179.544479,cover=476.91449
+		7:[time_spend_company<3] yes=11,no=12,missing=12,gain=100.769577,cover=385.238678
+			11:[satisfaction_level<0.150000006] yes=23,no=24,missing=24,gain=5.42339706,cover=32.0101128
+				23:leaf=0.0611376762,cover=1.39680946
+				24:[last_evaluation<0.939999998] yes=29,no=30,missing=30,gain=1.60139465,cover=30.6133041
+					29:leaf=-0.100000001,cover=28.5438957
+					30:leaf=-0.00446562842,cover=2.06940985
+			12:[satisfaction_level<0.360000014] yes=13,no=14,missing=14,gain=60.1129761,cover=353.228577
+				13:[satisfaction_level<0.119999997] yes=15,no=16,missing=16,gain=269.614197,cover=156.967239
+					15:leaf=0.100000001,cover=86.9522018
+					16:leaf=-0.100000001,cover=70.0150299
+				14:[last_evaluation<0.579999983] yes=17,no=18,missing=18,gain=66.7169037,cover=196.261337
+					17:leaf=0.100000001,cover=180.615738
+					18:leaf=-0.100000001,cover=15.6455994
+		8:[satisfaction_level<0.119999997] yes=19,no=20,missing=20,gain=59.9669113,cover=91.6758118
+			19:leaf=0.100000001,cover=10.21492
+			20:[average_montly_hours<287] yes=35,no=36,missing=36,gain=1.16046143,cover=81.4608917
+				35:leaf=-0.100000001,cover=79.5577087
+				36:leaf=-0.00983024016,cover=1.90318263
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=233.434326,cover=1218.1427
+		3:[average_montly_hours<287] yes=25,no=26,missing=26,gain=5.03088379,cover=985.895142
+			25:[satisfaction_level<0.479999989] yes=31,no=32,missing=32,gain=1.51525879,cover=984.654236
+				31:[average_montly_hours<227] yes=33,no=34,missing=34,gain=1.38532341,cover=3.02673554
+					33:leaf=-0.0623377338,cover=1.83779061
+					34:leaf=0.0433494896,cover=1.18894494
+				32:leaf=-0.100000001,cover=981.627502
+			26:leaf=0.0613060482,cover=1.24093187
+		4:[last_evaluation<0.819999993] yes=5,no=6,missing=6,gain=205.408783,cover=232.247482
+			5:[average_montly_hours<273] yes=37,no=38,missing=38,gain=1.07572937,cover=84.5963898
+				37:leaf=-0.100000001,cover=81.160202
+				38:[average_montly_hours<282] yes=39,no=40,missing=40,gain=0.745882988,cover=3.43618631
+					39:leaf=0.0138945775,cover=1.61733508
+					40:leaf=-0.0611067973,cover=1.81885135
+			6:[average_montly_hours<217] yes=9,no=10,missing=10,gain=122.082558,cover=147.651093
+				9:[last_evaluation<0.99000001] yes=27,no=28,missing=28,gain=3.35556793,cover=27.7698727
+					27:leaf=-0.100000001,cover=25.5586071
+					28:leaf=0.0137566822,cover=2.21126556
+				10:[satisfaction_level<0.699999988] yes=21,no=22,missing=22,gain=51.9009705,cover=119.881226
+					21:leaf=-0.100000001,cover=8.50865746
+					22:leaf=0.100000001,cover=111.372574
+booster[8]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=639.554016,cover=1631.23657
+	1:[number_project<3] yes=5,no=6,missing=6,gain=192.137039,cover=460.237762
+		5:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=74.797348,cover=191.09906
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=24.6656494,cover=175.442047
+				17:leaf=-0.100000001,cover=4.36744118
+				18:[satisfaction_level<0.360000014] yes=19,no=20,missing=20,gain=14.078186,cover=171.074615
+					19:leaf=-0.0700063482,cover=4.14777565
+					20:leaf=0.100000001,cover=166.926834
+			14:[average_montly_hours<265] yes=29,no=30,missing=30,gain=2.72904205,cover=15.6570015
+				29:leaf=-0.100000001,cover=14.4145288
+				30:leaf=0.0254483074,cover=1.24247313
+		6:[satisfaction_level<0.119999997] yes=7,no=8,missing=8,gain=397.6604,cover=269.138733
+			7:leaf=0.100000001,cover=94.7714462
+			8:[average_montly_hours<288] yes=21,no=22,missing=22,gain=13.1329498,cover=174.367279
+				21:[number_project<7] yes=23,no=24,missing=24,gain=8.13900757,cover=172.224289
+					23:leaf=-0.100000001,cover=170.801849
+					24:leaf=0.0920958519,cover=1.42244077
+				22:leaf=0.100000001,cover=2.14298034
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=230.979004,cover=1170.99878
+		3:[average_montly_hours<287] yes=25,no=26,missing=26,gain=4.78686523,cover=947.146362
+			25:[satisfaction_level<0.479999989] yes=33,no=34,missing=34,gain=1.2121582,cover=945.90741
+				33:[number_project<4] yes=35,no=36,missing=36,gain=2.43541002,cover=3.24099278
+					35:leaf=-0.0908756182,cover=1.58976412
+					36:leaf=0.0456710793,cover=1.65122867
+				34:[number_project<6] yes=39,no=40,missing=40,gain=0.634277344,cover=942.666443
+					39:leaf=-0.100000001,cover=923.258179
+					40:leaf=-0.0700192675,cover=19.4082451
+			26:leaf=0.0579646826,cover=1.23894858
+		4:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=182.885208,cover=223.852448
+			9:[average_montly_hours<273] yes=31,no=32,missing=32,gain=2.17938995,cover=79.128624
+				31:leaf=-0.100000001,cover=76.3806381
+				32:[last_evaluation<0.629999995] yes=37,no=38,missing=38,gain=1.20437336,cover=2.74798822
+					37:leaf=-0.0519397929,cover=1.58830726
+					38:leaf=0.0488634035,cover=1.15968096
+			10:[average_montly_hours<217] yes=11,no=12,missing=12,gain=107.961845,cover=144.723816
+				11:[last_evaluation<0.99000001] yes=27,no=28,missing=28,gain=3.28686905,cover=26.7048702
+					27:leaf=-0.100000001,cover=24.4933701
+					28:leaf=0.0128084039,cover=2.21150041
+				12:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=50.1961365,cover=118.018951
+					15:leaf=-0.100000001,cover=9.14142609
+					16:leaf=0.100000001,cover=108.877525
+booster[9]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=571.188843,cover=1578.66785
+	1:[number_project<3] yes=5,no=6,missing=6,gain=170.441971,cover=447.349823
+		5:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=78.0344086,cover=184.428772
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=22.7792664,cover=167.767303
+				17:leaf=-0.100000001,cover=4.19106913
+				18:[satisfaction_level<0.360000014] yes=19,no=20,missing=20,gain=14.216156,cover=163.576233
+					19:leaf=-0.0678766593,cover=4.32817507
+					20:leaf=0.100000001,cover=159.248062
+			14:leaf=-0.100000001,cover=16.661459
+		6:[satisfaction_level<0.119999997] yes=7,no=8,missing=8,gain=352.067871,cover=262.921082
+			7:leaf=0.100000001,cover=89.2575912
+			8:[last_evaluation<1] yes=21,no=22,missing=22,gain=9.36256409,cover=173.663483
+				21:[number_project<7] yes=23,no=24,missing=24,gain=7.64057922,cover=171.422836
+					23:leaf=-0.100000001,cover=170.031952
+					24:leaf=0.087891534,cover=1.39088154
+				22:[satisfaction_level<0.200000003] yes=33,no=34,missing=34,gain=0.314533234,cover=2.24064445
+					33:leaf=0.100000001,cover=1.12904668
+					34:leaf=0.0106792282,cover=1.11159766
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=225.894897,cover=1131.31799
+		3:[satisfaction_level<0.479999989] yes=25,no=26,missing=26,gain=1.56994629,cover=912.368835
+			25:[number_project<4] yes=27,no=28,missing=28,gain=1.92869568,cover=3.0006876
+				27:leaf=-0.081738092,cover=1.33282149
+				28:leaf=0.0425450765,cover=1.66786611
+			26:[number_project<6] yes=29,no=30,missing=30,gain=1.24328613,cover=909.368164
+				29:leaf=-0.100000001,cover=889.187195
+				30:[last_evaluation<0.899999976] yes=31,no=32,missing=32,gain=3.09335613,cover=20.1809444
+					31:leaf=-0.0831059143,cover=16.7197113
+					32:leaf=0.0143253254,cover=3.46123385
+		4:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=165.351578,cover=218.949158
+			9:[last_evaluation<0.810000002] yes=35,no=36,missing=36,gain=0.107498169,cover=77.8077774
+				35:leaf=-0.100000001,cover=75.5073166
+				36:[number_project<5] yes=37,no=38,missing=38,gain=0.789677203,cover=2.30046344
+					37:leaf=-0.0731886029,cover=1.23300195
+					38:leaf=0.0150511116,cover=1.06746149
+			10:[time_spend_company<7] yes=11,no=12,missing=12,gain=99.4176712,cover=141.141373
+				11:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=41.6899872,cover=122.072449
+					15:leaf=-0.0990483463,cover=9.72431469
+					16:leaf=0.100000001,cover=112.348137
+				12:leaf=-0.100000001,cover=19.068922
+booster[10]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=519.136292,cover=1509.46863
+	1:[number_project<3] yes=3,no=4,missing=4,gain=154.206024,cover=425.196503
+		3:[last_evaluation<0.579999983] yes=7,no=8,missing=8,gain=75.5855713,cover=175.474014
+			7:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=22.3771057,cover=161.361694
+				17:leaf=-0.100000001,cover=4.23263693
+				18:[satisfaction_level<0.360000014] yes=23,no=24,missing=24,gain=10.8242035,cover=157.129059
+					23:leaf=-0.0549061671,cover=3.84424615
+					24:leaf=0.100000001,cover=153.284821
+			8:leaf=-0.100000001,cover=14.112318
+		4:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=322.900879,cover=249.722488
+			5:leaf=0.100000001,cover=85.6240845
+			6:[average_montly_hours<288] yes=19,no=20,missing=20,gain=13.1329651,cover=164.098404
+				19:[last_evaluation<1] yes=27,no=28,missing=28,gain=8.93678284,cover=161.955429
+					27:leaf=-0.100000001,cover=159.678207
+					28:leaf=0.0723675489,cover=2.27720857
+				20:leaf=0.100000001,cover=2.14298034
+	2:[last_evaluation<1] yes=9,no=10,missing=10,gain=51.9650879,cover=1084.27209
+		9:[last_evaluation<0.819999993] yes=11,no=12,missing=12,gain=25.4315186,cover=1056.54443
+			11:[average_montly_hours<286] yes=37,no=38,missing=38,gain=0.581726074,cover=657.845215
+				37:leaf=-0.100000001,cover=656.329956
+				38:leaf=-0.0158344768,cover=1.51523495
+			12:[average_montly_hours<226] yes=13,no=14,missing=14,gain=80.5523529,cover=398.699249
+				13:[average_montly_hours<217] yes=31,no=32,missing=32,gain=2.54421997,cover=211.784042
+					31:leaf=-0.100000001,cover=183.681839
+					32:leaf=-0.0641311705,cover=28.1021919
+				14:[number_project<4] yes=15,no=16,missing=16,gain=79.1872253,cover=186.915207
+					15:leaf=-0.100000001,cover=47.5682831
+					16:leaf=0.0158525929,cover=139.346924
+		10:[satisfaction_level<0.720000029] yes=21,no=22,missing=22,gain=12.988533,cover=27.7276611
+			21:[average_montly_hours<157] yes=33,no=34,missing=34,gain=1.51645756,cover=6.34158182
+				33:[average_montly_hours<146] yes=35,no=36,missing=36,gain=1.45857811,cover=2.11589885
+					35:leaf=-0.0649486706,cover=1.00829387
+					36:leaf=0.0539257936,cover=1.10760498
+				34:leaf=-0.100000001,cover=4.22568274
+			22:[average_montly_hours<203] yes=25,no=26,missing=26,gain=10.0592937,cover=21.3860798
+				25:leaf=-0.0930925161,cover=2.35934305
+				26:[satisfaction_level<0.920000017] yes=29,no=30,missing=30,gain=4.52376938,cover=19.0267353
+					29:leaf=0.100000001,cover=17.9541187
+					30:leaf=-0.0604944527,cover=1.07261646
+booster[11]:
+0:[number_project<3] yes=1,no=2,missing=2,gain=286.074951,cover=1448.28101
+	1:[last_evaluation<0.579999983] yes=7,no=8,missing=8,gain=164.66655,cover=232.234863
+		7:[average_montly_hours<162] yes=13,no=14,missing=14,gain=63.155899,cover=172.62735
+			13:[average_montly_hours<126] yes=15,no=16,missing=16,gain=37.3889771,cover=157.903946
+				15:leaf=-0.100000001,cover=6.108356
+				16:[time_spend_company<3] yes=17,no=18,missing=18,gain=16.0731964,cover=151.795593
+					17:leaf=-0.100000001,cover=3.05144858
+					18:leaf=0.100000001,cover=148.744141
+			14:[average_montly_hours<246] yes=31,no=32,missing=32,gain=0.455755234,cover=14.7233982
+				31:leaf=-0.100000001,cover=9.45505333
+				32:[average_montly_hours<254] yes=33,no=34,missing=34,gain=5.39011049,cover=5.26834488
+					33:leaf=0.0695358217,cover=1.72971892
+					34:leaf=-0.100000001,cover=3.53862596
+		8:[average_montly_hours<276] yes=23,no=24,missing=24,gain=4.27514648,cover=59.6075211
+			23:[last_evaluation<1] yes=25,no=26,missing=26,gain=3.99410248,cover=57.6674156
+				25:leaf=-0.100000001,cover=56.5479279
+				26:leaf=0.0503968298,cover=1.11948609
+			24:leaf=0.0313839689,cover=1.94010687
+	2:[time_spend_company<4] yes=3,no=4,missing=4,gain=284.086853,cover=1216.04614
+		3:[average_montly_hours<287] yes=19,no=20,missing=20,gain=10.8997803,cover=717.913635
+			19:leaf=-0.100000001,cover=716.049438
+			20:leaf=0.100000001,cover=1.86417997
+		4:[average_montly_hours<217] yes=5,no=6,missing=6,gain=239.961166,cover=498.132477
+			5:[last_evaluation<1] yes=27,no=28,missing=28,gain=1.79627991,cover=191.553986
+				27:[number_project<6] yes=35,no=36,missing=36,gain=0.287490845,cover=187.806061
+					35:leaf=-0.100000001,cover=164.984528
+					36:leaf=-0.0750114247,cover=22.8215427
+				28:[average_montly_hours<182] yes=29,no=30,missing=30,gain=1.43453872,cover=3.74792671
+					29:leaf=-0.0628985241,cover=2.22489667
+					30:leaf=0.0377420671,cover=1.52302992
+			6:[last_evaluation<0.769999981] yes=9,no=10,missing=10,gain=153.313461,cover=306.578491
+				9:[average_montly_hours<288] yes=21,no=22,missing=22,gain=8.59318161,cover=68.8498993
+					21:leaf=-0.100000001,cover=67.3028488
+					22:leaf=0.0934776515,cover=1.54704416
+				10:[number_project<4] yes=11,no=12,missing=12,gain=75.5438538,cover=237.728592
+					11:leaf=-0.100000001,cover=18.7401524
+					12:leaf=0.089613907,cover=218.988434
+booster[12]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=441.679016,cover=1382.37207
+	1:[number_project<3] yes=7,no=8,missing=8,gain=112.977448,cover=388.866608
+		7:[last_evaluation<0.579999983] yes=13,no=14,missing=14,gain=57.2151031,cover=160.730865
+			13:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=20.9733429,cover=146.988937
+				17:leaf=-0.100000001,cover=4.1326642
+				18:[satisfaction_level<0.360000014] yes=19,no=20,missing=20,gain=10.8881683,cover=142.856262
+					19:leaf=-0.0536623262,cover=3.95007443
+					20:leaf=0.100000001,cover=138.906189
+			14:leaf=-0.099973239,cover=13.7419405
+		8:[satisfaction_level<0.119999997] yes=9,no=10,missing=10,gain=252.853287,cover=228.135727
+			9:leaf=0.100000001,cover=78.8373184
+			10:[last_evaluation<1] yes=21,no=22,missing=22,gain=8.3737793,cover=149.298416
+				21:[number_project<7] yes=23,no=24,missing=24,gain=8.09140015,cover=147.008698
+					23:leaf=-0.0997946039,cover=145.582321
+					24:leaf=0.0926256254,cover=1.42637396
+				22:[number_project<4] yes=35,no=36,missing=36,gain=0.510479212,cover=2.28972054
+					35:leaf=0.100000001,cover=1.13757288
+					36:leaf=0.00372772361,cover=1.15214765
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=205.664368,cover=993.505493
+		3:[number_project<6] yes=25,no=26,missing=26,gain=3.60290527,cover=795.11145
+			25:[satisfaction_level<0.479999989] yes=31,no=32,missing=32,gain=1.83337402,cover=778.684998
+				31:[number_project<4] yes=33,no=34,missing=34,gain=1.66363132,cover=3.20589423
+					33:leaf=-0.0755358487,cover=1.3806535
+					34:leaf=0.0376687907,cover=1.82524061
+				32:leaf=-0.100000001,cover=775.479065
+			26:[satisfaction_level<0.74000001] yes=27,no=28,missing=28,gain=4.60561419,cover=16.4264793
+				27:[last_evaluation<0.899999976] yes=29,no=30,missing=30,gain=3.71232128,cover=8.22152615
+					29:leaf=-0.0321711414,cover=6.33249998
+					30:leaf=0.100000001,cover=1.88902676
+				28:leaf=-0.0961702242,cover=8.20495224
+		4:[last_evaluation<0.819999993] yes=5,no=6,missing=6,gain=115.977608,cover=198.394028
+			5:[time_spend_company<6] yes=37,no=38,missing=38,gain=0.343338013,cover=67.0462189
+				37:[satisfaction_level<0.779999971] yes=39,no=40,missing=40,gain=2.33166981,cover=22.2886658
+					39:leaf=-0.100000001,cover=13.2086115
+					40:leaf=-0.0290443804,cover=9.08005428
+				38:leaf=-0.100000001,cover=44.7575531
+			6:[time_spend_company<7] yes=11,no=12,missing=12,gain=77.352356,cover=131.347809
+				11:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=33.971077,cover=113.693848
+					15:leaf=-0.0837772638,cover=9.83045959
+					16:leaf=0.100000001,cover=103.863388
+				12:leaf=-0.100000001,cover=17.653965
+booster[13]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=396.484711,cover=1313.27466
+	1:[time_spend_company<5] yes=7,no=8,missing=8,gain=103.93396,cover=368.559784
+		7:[number_project<3] yes=11,no=12,missing=12,gain=46.2641525,cover=296.691071
+			11:[satisfaction_level<0.360000014] yes=15,no=16,missing=16,gain=40.3115997,cover=147.74527
+				15:[average_montly_hours<240] yes=29,no=30,missing=30,gain=2.69540596,cover=9.37544727
+					29:leaf=-0.100000001,cover=7.85709095
+					30:leaf=0.0178121887,cover=1.51835644
+				16:[average_montly_hours<126] yes=21,no=22,missing=22,gain=18.2279358,cover=138.369827
+					21:leaf=-0.100000001,cover=2.79912448
+					22:leaf=0.100000001,cover=135.570694
+			12:[satisfaction_level<0.119999997] yes=13,no=14,missing=14,gain=147.991425,cover=148.945801
+				13:leaf=0.100000001,cover=67.2089157
+				14:[average_montly_hours<288] yes=25,no=26,missing=26,gain=5.89398193,cover=81.7368774
+					25:leaf=-0.0800534487,cover=80.3668137
+					26:leaf=0.0855577588,cover=1.37006831
+		8:[satisfaction_level<0.119999997] yes=19,no=20,missing=20,gain=35.4840965,cover=71.868721
+			19:leaf=0.100000001,cover=7.82724571
+			20:[average_montly_hours<287] yes=33,no=34,missing=34,gain=2.2146759,cover=64.0414734
+				33:[average_montly_hours<140] yes=39,no=40,missing=40,gain=0.717048645,cover=62.4956818
+					39:leaf=-0.0549252406,cover=8.43550301
+					40:leaf=-0.100000001,cover=54.0601807
+				34:leaf=0.00882005226,cover=1.54578984
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=195.693726,cover=944.714844
+		3:[number_project<6] yes=23,no=24,missing=24,gain=5.99499512,cover=753.824463
+			23:[average_montly_hours<286] yes=35,no=36,missing=36,gain=1.67358398,cover=737.132629
+				35:[satisfaction_level<0.49000001] yes=37,no=38,missing=38,gain=0.938598633,cover=735.243103
+					37:leaf=-0.0620807074,cover=13.8733549
+					38:leaf=-0.100000001,cover=721.369751
+				36:leaf=-0.000275153288,cover=1.88950455
+			24:[satisfaction_level<0.819999993] yes=27,no=28,missing=28,gain=4.3549757,cover=16.6918507
+				27:[average_montly_hours<252] yes=31,no=32,missing=32,gain=2.53569722,cover=11.7613573
+					31:leaf=-0.0273548868,cover=8.94502544
+					32:leaf=0.0685154125,cover=2.81633162
+				28:leaf=-0.100000001,cover=4.9304924
+		4:[average_montly_hours<217] yes=5,no=6,missing=6,gain=104.431343,cover=190.89035
+			5:[time_spend_company<6] yes=41,no=42,missing=42,gain=0.120315552,cover=61.0956459
+				41:[average_montly_hours<153] yes=43,no=44,missing=44,gain=2.90151596,cover=21.1834373
+					43:leaf=-0.100000001,cover=9.0692482
+					44:leaf=-0.0357012711,cover=12.1141891
+				42:leaf=-0.100000001,cover=39.9122086
+			6:[time_spend_company<7] yes=9,no=10,missing=10,gain=68.7717285,cover=129.794708
+				9:[satisfaction_level<0.699999988] yes=17,no=18,missing=18,gain=38.0755615,cover=112.740097
+					17:leaf=-0.0855258033,cover=11.3879108
+					18:leaf=0.100000001,cover=101.35218
+				10:leaf=-0.100000001,cover=17.054615
+booster[14]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=359.911957,cover=1249.22131
+	1:[time_spend_company<5] yes=7,no=8,missing=8,gain=86.3251114,cover=348.215485
+		7:[time_spend_company<3] yes=11,no=12,missing=12,gain=40.1885529,cover=282.919739
+			11:[satisfaction_level<0.150000006] yes=21,no=22,missing=22,gain=5.44609165,cover=23.6073818
+				21:leaf=0.0887849033,cover=1.15455496
+				22:[last_evaluation<0.939999998] yes=23,no=24,missing=24,gain=3.82102776,cover=22.4528275
+					23:leaf=-0.0930139646,cover=21.159317
+					24:leaf=0.0510676801,cover=1.29351139
+			12:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=29.8771667,cover=259.312347
+				17:leaf=-0.100000001,cover=8.28076363
+				18:[last_evaluation<0.579999983] yes=19,no=20,missing=20,gain=30.5048981,cover=251.031586
+					19:leaf=0.100000001,cover=140.063599
+					20:leaf=0.030205071,cover=110.967979
+		8:[satisfaction_level<0.119999997] yes=15,no=16,missing=16,gain=30.7368126,cover=65.2957535
+			15:leaf=0.100000001,cover=7.22594833
+			16:[average_montly_hours<140] yes=27,no=28,missing=28,gain=1.17523575,cover=58.0698051
+				27:[average_montly_hours<132] yes=29,no=30,missing=30,gain=8.11946774,cover=7.59692097
+					29:leaf=-0.100000001,cover=5.47652006
+					30:leaf=0.0902971178,cover=2.12040138
+				28:[average_montly_hours<287] yes=33,no=34,missing=34,gain=0.726005554,cover=50.4728851
+					33:leaf=-0.100000001,cover=48.9789009
+					34:leaf=-0.0121216774,cover=1.49398351
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=191.626404,cover=901.005859
+		3:[average_montly_hours<286] yes=31,no=32,missing=32,gain=1.03729248,cover=716.854126
+			31:leaf=-0.100000001,cover=714.917908
+			32:leaf=-0.0127098206,cover=1.93622589
+		4:[average_montly_hours<217] yes=5,no=6,missing=6,gain=88.5461807,cover=184.151779
+			5:[last_evaluation<0.99000001] yes=25,no=26,missing=26,gain=3.14800262,cover=58.3131371
+				25:[time_spend_company<6] yes=35,no=36,missing=36,gain=0.473117828,cover=56.6380539
+					35:leaf=-0.0716417804,cover=19.8050098
+					36:leaf=-0.100000001,cover=36.833046
+				26:leaf=0.0222371295,cover=1.67508101
+			6:[time_spend_company<7] yes=9,no=10,missing=10,gain=63.1845703,cover=125.838646
+				9:[last_evaluation<0.810000002] yes=13,no=14,missing=14,gain=33.1826553,cover=109.327461
+					13:leaf=-0.0648718253,cover=13.3044987
+					14:leaf=0.0994052961,cover=96.0229568
+				10:leaf=-0.100000001,cover=16.5111847
+booster[15]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=310.907684,cover=1192.18359
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=82.9568787,cover=338.097839
+		5:leaf=0.100000001,cover=68.8718185
+		6:[satisfaction_level<0.360000014] yes=7,no=8,missing=8,gain=154.389023,cover=269.226013
+			7:[average_montly_hours<288] yes=19,no=20,missing=20,gain=5.5490799,cover=110.671524
+				19:[last_evaluation<0.99000001] yes=21,no=22,missing=22,gain=5.6492691,cover=109.537132
+					21:leaf=-0.0986333191,cover=106.083527
+					22:leaf=0.0232062023,cover=3.45360398
+				20:leaf=0.0776215643,cover=1.1343869
+			8:[average_montly_hours<162] yes=11,no=12,missing=12,gain=57.0131035,cover=158.554504
+				11:[average_montly_hours<126] yes=15,no=16,missing=16,gain=39.453804,cover=133.56395
+					15:leaf=-0.100000001,cover=7.41315174
+					16:leaf=0.100000001,cover=126.150795
+				12:[average_montly_hours<271] yes=25,no=26,missing=26,gain=4.92694473,cover=24.9905567
+					25:leaf=-0.0931358412,cover=21.1963787
+					26:leaf=0.0230540708,cover=3.79417777
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=169.488647,cover=854.085754
+		3:[average_montly_hours<287] yes=23,no=24,missing=24,gain=4.97595215,cover=678.645569
+			23:[satisfaction_level<0.479999989] yes=29,no=30,missing=30,gain=3.23138428,cover=677.429077
+				29:[average_montly_hours<173] yes=33,no=34,missing=34,gain=1.0847168,cover=2.60581756
+					33:leaf=-0.037532445,cover=1.50869536
+					34:leaf=0.0595301501,cover=1.09712219
+				30:[satisfaction_level<0.49000001] yes=37,no=38,missing=38,gain=0.659912109,cover=674.823303
+					37:leaf=-0.0594636314,cover=10.3187847
+					38:leaf=-0.100000001,cover=664.504517
+			24:leaf=0.0614281297,cover=1.21649361
+		4:[last_evaluation<0.819999993] yes=9,no=10,missing=10,gain=77.7693481,cover=175.44014
+			9:[average_montly_hours<273] yes=27,no=28,missing=28,gain=3.37134552,cover=59.2963371
+				27:[time_spend_company<6] yes=31,no=32,missing=32,gain=1.58995056,cover=56.86166
+					31:leaf=-0.0630620047,cover=20.0982056
+					32:leaf=-0.100000001,cover=36.7634544
+				28:[average_montly_hours<282] yes=35,no=36,missing=36,gain=1.05641925,cover=2.4346776
+					35:leaf=0.0644449294,cover=1.13435769
+					36:leaf=-0.0328695253,cover=1.30032003
+			10:[time_spend_company<7] yes=13,no=14,missing=14,gain=55.0440598,cover=116.143799
+				13:[average_montly_hours<213] yes=17,no=18,missing=18,gain=32.8050842,cover=100.919128
+					17:leaf=-0.075469695,cover=11.8224392
+					18:leaf=0.096570991,cover=89.0966873
+				14:leaf=-0.100000001,cover=15.2246723
+booster[16]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=278.118652,cover=1117.87
+	1:[satisfaction_level<0.119999997] yes=7,no=8,missing=8,gain=73.565979,cover=317.008698
+		7:leaf=0.100000001,cover=64.0918121
+		8:[number_project<3] yes=9,no=10,missing=10,gain=159.623962,cover=252.916885
+			9:[satisfaction_level<0.360000014] yes=11,no=12,missing=12,gain=40.9341354,cover=127.283318
+				11:leaf=-0.100000001,cover=10.2744741
+				12:[last_evaluation<0.579999983] yes=15,no=16,missing=16,gain=18.2541809,cover=117.008842
+					15:leaf=0.100000001,cover=110.553505
+					16:leaf=-0.0611696504,cover=6.45533943
+			10:[number_project<7] yes=25,no=26,missing=26,gain=7.47814941,cover=125.63356
+				25:[last_evaluation<1] yes=27,no=28,missing=28,gain=5.03469086,cover=124.181229
+					27:leaf=-0.0861337036,cover=121.960114
+					28:leaf=0.0469333716,cover=2.2211175
+				26:leaf=0.0985963345,cover=1.45233178
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=157.582764,cover=800.861328
+		3:[number_project<6] yes=23,no=24,missing=24,gain=7.99804688,cover=633.148499
+			23:[satisfaction_level<0.49000001] yes=31,no=32,missing=32,gain=3.5713501,cover=618.686707
+				31:[time_spend_company<4] yes=33,no=34,missing=34,gain=4.42238522,cover=12.0330715
+					33:leaf=-0.0722983107,cover=9.16490459
+					34:leaf=0.0543352552,cover=2.86816645
+				32:leaf=-0.100000001,cover=606.653687
+			24:[satisfaction_level<0.819999993] yes=29,no=30,missing=30,gain=4.35872936,cover=14.4617519
+				29:[last_evaluation<0.899999976] yes=35,no=36,missing=36,gain=1.97201312,cover=10.1876202
+					35:leaf=-0.0108074509,cover=8.01592827
+					36:leaf=0.0806602836,cover=2.17169189
+				30:leaf=-0.097080633,cover=4.27413225
+		4:[time_spend_company<6] yes=5,no=6,missing=6,gain=73.5946655,cover=167.712875
+			5:[last_evaluation<0.810000002] yes=13,no=14,missing=14,gain=37.033062,cover=90.0553513
+				13:[last_evaluation<0.529999971] yes=37,no=38,missing=38,gain=1.81809759,cover=17.6770763
+					37:leaf=-0.100000001,cover=6.17326117
+					38:leaf=-0.0341914073,cover=11.5038157
+				14:[satisfaction_level<0.699999988] yes=19,no=20,missing=20,gain=15.9948959,cover=72.378273
+					19:leaf=-0.0742531791,cover=4.61521482
+					20:leaf=0.100000001,cover=67.7630615
+			6:[time_spend_company<7] yes=17,no=18,missing=18,gain=16.7198982,cover=77.6575165
+				17:[number_project<4] yes=21,no=22,missing=22,gain=12.0674162,cover=41.7557755
+					21:leaf=-0.100000001,cover=9.91661835
+					22:leaf=0.00772332493,cover=31.839159
+				18:leaf=-0.100000001,cover=35.9017372
+booster[17]:
+0:[number_project<3] yes=1,no=2,missing=2,gain=146.745392,cover=1056.198
+	1:[last_evaluation<0.579999983] yes=7,no=8,missing=8,gain=77.6187286,cover=171.333633
+		7:[average_montly_hours<162] yes=13,no=14,missing=14,gain=39.9566956,cover=127.412384
+			13:[average_montly_hours<126] yes=15,no=16,missing=16,gain=29.6466064,cover=116.124413
+				15:leaf=-0.100000001,cover=5.40638351
+				16:[time_spend_company<3] yes=17,no=18,missing=18,gain=11.902298,cover=110.718025
+					17:leaf=-0.0885419846,cover=2.57327271
+					18:leaf=0.100000001,cover=108.144753
+			14:[average_montly_hours<246] yes=43,no=44,missing=44,gain=0.649173737,cover=11.2879753
+				43:leaf=-0.100000001,cover=7.38193655
+				44:[average_montly_hours<254] yes=45,no=46,missing=46,gain=2.79485321,cover=3.90603876
+					45:leaf=0.0475101881,cover=1.49467933
+					46:leaf=-0.0931965783,cover=2.41135931
+		8:[average_montly_hours<276] yes=21,no=22,missing=22,gain=7.4999218,cover=43.9212418
+			21:[time_spend_company<3] yes=37,no=38,missing=38,gain=0.750202179,cover=41.5162773
+				37:[last_evaluation<0.779999971] yes=39,no=40,missing=40,gain=3.70758939,cover=10.2009668
+					39:leaf=-0.100000001,cover=5.85113096
+					40:leaf=0.0127746603,cover=4.34983635
+				38:[average_montly_hours<253] yes=41,no=42,missing=42,gain=0.883449554,cover=31.3153114
+					41:leaf=-0.100000001,cover=27.9273167
+					42:leaf=-0.0310937557,cover=3.38799548
+			22:[average_montly_hours<283] yes=35,no=36,missing=36,gain=0.768377066,cover=2.4049623
+				35:leaf=0.100000001,cover=1.15745819
+				36:leaf=-0,cover=1.24750423
+	2:[time_spend_company<4] yes=3,no=4,missing=4,gain=192.718384,cover=884.86438
+		3:[average_montly_hours<287] yes=19,no=20,missing=20,gain=8.56872559,cover=506.421875
+			19:[number_project<6] yes=29,no=30,missing=30,gain=2.1272583,cover=504.854706
+				29:leaf=-0.100000001,cover=489.22049
+				30:[last_evaluation<0.74000001] yes=33,no=34,missing=34,gain=1.91341209,cover=15.6342125
+					33:leaf=-0.0849958584,cover=8.50915337
+					34:leaf=-0.0124585731,cover=7.12505865
+			20:leaf=0.0910347775,cover=1.567168
+		4:[average_montly_hours<217] yes=5,no=6,missing=6,gain=113.38726,cover=378.442535
+			5:[number_project<6] yes=25,no=26,missing=26,gain=2.89092255,cover=140.241028
+				25:[last_evaluation<1] yes=27,no=28,missing=28,gain=3.14736938,cover=122.155434
+					27:leaf=-0.0928911492,cover=119.387512
+					28:leaf=0.00881643035,cover=2.76792717
+				26:[last_evaluation<0.550000012] yes=31,no=32,missing=32,gain=1.93891764,cover=18.0855865
+					31:leaf=-0.0965927392,cover=4.11323357
+					32:leaf=-0.0207473468,cover=13.9723539
+			6:[last_evaluation<0.769999981] yes=9,no=10,missing=10,gain=66.4460754,cover=238.201508
+				9:[average_montly_hours<270] yes=23,no=24,missing=24,gain=6.24642944,cover=50.8887787
+					23:leaf=-0.0899229869,cover=39.9779587
+					24:leaf=-0.00347777712,cover=10.9108191
+				10:[number_project<4] yes=11,no=12,missing=12,gain=43.4005203,cover=187.312729
+					11:leaf=-0.100000001,cover=15.2226334
+					12:leaf=0.0702713653,cover=172.090088
+booster[18]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=233.248108,cover=1004.90552
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=61.0677109,cover=291.274078
+		5:leaf=0.100000001,cover=57.691143
+		6:[number_project<3] yes=7,no=8,missing=8,gain=127.406876,cover=233.582932
+			7:[satisfaction_level<0.360000014] yes=13,no=14,missing=14,gain=34.8771744,cover=115.070831
+				13:leaf=-0.100000001,cover=9.43391514
+				14:[last_evaluation<0.579999983] yes=17,no=18,missing=18,gain=13.6242752,cover=105.636917
+					17:leaf=0.100000001,cover=99.9453125
+					18:leaf=-0.0498608164,cover=5.691607
+			8:[number_project<7] yes=21,no=22,missing=22,gain=6.65206146,cover=118.512093
+				21:[last_evaluation<1] yes=23,no=24,missing=24,gain=6.01042938,cover=117.068077
+					23:leaf=-0.077677317,cover=114.597076
+					24:leaf=0.0602324083,cover=2.47099829
+				22:leaf=0.0969537422,cover=1.44401717
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=130.299255,cover=713.63147
+		3:[number_project<6] yes=19,no=20,missing=20,gain=7.69763184,cover=558.428528
+			19:[satisfaction_level<0.49000001] yes=25,no=26,missing=26,gain=2.98101807,cover=543.820435
+				25:[time_spend_company<4] yes=27,no=28,missing=28,gain=3.19224238,cover=11.7280931
+					27:leaf=-0.0695634633,cover=9.10797119
+					28:leaf=0.0413883477,cover=2.62012196
+				26:[number_project<3] yes=35,no=36,missing=36,gain=0.266113281,cover=532.092346
+					35:leaf=-0.0790389255,cover=32.3687859
+					36:leaf=-0.100000001,cover=499.723572
+			20:[satisfaction_level<0.819999993] yes=29,no=30,missing=30,gain=2.90015483,cover=14.6080637
+				29:[Work_accident<1] yes=33,no=34,missing=34,gain=1.4007231,cover=11.0029469
+					33:leaf=0.0181197431,cover=9.69425678
+					34:leaf=-0.0676305071,cover=1.30869019
+				30:leaf=-0.0912022814,cover=3.60511637
+		4:[time_spend_company<7] yes=9,no=10,missing=10,gain=55.9851036,cover=155.202972
+			9:[last_evaluation<0.819999993] yes=11,no=12,missing=12,gain=40.2057114,cover=123.247787
+				11:[last_evaluation<0.529999971] yes=31,no=32,missing=32,gain=2.51776028,cover=32.8628387
+					31:leaf=-0.100000001,cover=11.0080929
+					32:leaf=-0.0390939377,cover=21.854744
+				12:[number_project<4] yes=15,no=16,missing=16,gain=19.7457581,cover=90.3849487
+					15:leaf=-0.0744159743,cover=8.33209801
+					16:leaf=0.0801241398,cover=82.0528564
+			10:leaf=-0.100000001,cover=31.9551792
+booster[19]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=204.203522,cover=939.980408
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=59.73843,cover=274.307648
+		5:leaf=0.100000001,cover=55.0295105
+		6:[average_montly_hours<162] yes=7,no=8,missing=8,gain=87.6746445,cover=219.278137
+			7:[average_montly_hours<126] yes=11,no=12,missing=12,gain=48.1561127,cover=128.556458
+				11:leaf=-0.100000001,cover=13.7463341
+				12:[last_evaluation<0.579999983] yes=15,no=16,missing=16,gain=25.7286911,cover=114.810127
+					15:leaf=0.0925314352,cover=97.7051697
+					16:leaf=-0.0381080955,cover=17.1049614
+			8:[average_montly_hours<288] yes=21,no=22,missing=22,gain=11.6703033,cover=90.7216721
+				21:[last_evaluation<0.99000001] yes=25,no=26,missing=26,gain=6.40942764,cover=88.4608154
+					25:leaf=-0.0883048102,cover=84.8248062
+					26:leaf=0.0371425487,cover=3.63601089
+				22:leaf=0.100000001,cover=2.26085401
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=111.661926,cover=665.672729
+		3:[satisfaction_level<0.49000001] yes=27,no=28,missing=28,gain=3.57659912,cover=519.800903
+			27:[average_montly_hours<254] yes=29,no=30,missing=30,gain=5.80299473,cover=11.0253801
+				29:[last_evaluation<0.779999971] yes=33,no=34,missing=34,gain=2.74313164,cover=9.27434731
+					33:leaf=-0.100000001,cover=6.19221163
+					34:leaf=0.0048988401,cover=3.08213592
+				30:leaf=0.0947211087,cover=1.75103211
+			28:[average_montly_hours<286] yes=31,no=32,missing=32,gain=3.60449219,cover=508.775543
+				31:[time_spend_company<4] yes=35,no=36,missing=36,gain=0.957580566,cover=507.119446
+					35:leaf=-0.100000001,cover=423.315796
+					36:leaf=-0.0840495452,cover=83.8036423
+				32:leaf=0.0287719201,cover=1.65612006
+		4:[time_spend_company<6] yes=9,no=10,missing=10,gain=48.8381577,cover=145.871826
+			9:[satisfaction_level<0.660000026] yes=13,no=14,missing=14,gain=25.7844505,cover=79.1414261
+				13:leaf=-0.100000001,cover=8.3127861
+				14:[average_montly_hours<153] yes=17,no=18,missing=18,gain=21.3322334,cover=70.8286362
+					17:leaf=-0.100000001,cover=5.42087746
+					18:leaf=0.0860120282,cover=65.4077606
+			10:[time_spend_company<7] yes=19,no=20,missing=20,gain=13.0284901,cover=66.7304001
+				19:[satisfaction_level<0.930000007] yes=23,no=24,missing=24,gain=8.37197685,cover=37.1303902
+					23:leaf=-0.00250634993,cover=32.5876312
+					24:leaf=-0.100000001,cover=4.54275751
+				20:leaf=-0.100000001,cover=29.6000118
+booster[20]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=177.496735,cover=887.757751
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=54.7852783,cover=262.17569
+		5:leaf=0.100000001,cover=50.8742218
+		6:[number_project<3] yes=7,no=8,missing=8,gain=98.7665176,cover=211.301483
+			7:[average_montly_hours<162] yes=11,no=12,missing=12,gain=27.233902,cover=102.462624
+				11:[average_montly_hours<126] yes=15,no=16,missing=16,gain=20.7880859,cover=93.6084137
+					15:leaf=-0.100000001,cover=3.93960834
+					16:leaf=0.0942660719,cover=89.668808
+				12:[average_montly_hours<279] yes=29,no=30,missing=30,gain=3.11235809,cover=8.85421181
+					29:leaf=-0.100000001,cover=7.55143833
+					30:leaf=0.0314569063,cover=1.30277348
+			8:[average_montly_hours<288] yes=23,no=24,missing=24,gain=7.13258743,cover=108.83886
+				23:[number_project<7] yes=27,no=28,missing=28,gain=5.45524216,cover=107.076416
+					27:leaf=-0.0745814964,cover=105.870621
+					28:leaf=0.0895776078,cover=1.20579445
+				24:leaf=0.0945720002,cover=1.76244009
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=110.901917,cover=625.582031
+		3:[number_project<6] yes=25,no=26,missing=26,gain=6.50286865,cover=481.855469
+			25:[number_project<3] yes=31,no=32,missing=32,gain=2.83334351,cover=468.769226
+				31:[average_montly_hours<253] yes=33,no=34,missing=34,gain=4.94311905,cover=30.0771294
+					33:leaf=-0.0829432607,cover=24.4113998
+					34:leaf=0.0164373796,cover=5.66572952
+				32:[average_montly_hours<286] yes=39,no=40,missing=40,gain=1.32925415,cover=438.692108
+					39:leaf=-0.100000001,cover=437.430389
+					40:leaf=-0,cover=1.26172066
+			26:[satisfaction_level<0.819999993] yes=37,no=38,missing=38,gain=2.26130033,cover=13.0862417
+				37:[last_evaluation<0.899999976] yes=41,no=42,missing=42,gain=1.3215425,cover=9.80049419
+					41:leaf=-0.0216694847,cover=7.23041773
+					42:leaf=0.051177986,cover=2.5700767
+				38:leaf=-0.0866430253,cover=3.28574729
+		4:[time_spend_company<6] yes=9,no=10,missing=10,gain=45.9765091,cover=143.726578
+			9:[last_evaluation<0.810000002] yes=13,no=14,missing=14,gain=23.1052666,cover=78.6267471
+				13:[satisfaction_level<0.810000002] yes=35,no=36,missing=36,gain=2.35946226,cover=15.8162384
+					35:leaf=-0.0210948195,cover=10.3991747
+					36:leaf=-0.100000001,cover=5.41706371
+				14:[satisfaction_level<0.699999988] yes=17,no=18,missing=18,gain=14.3190308,cover=62.8105125
+					17:leaf=-0.0751659647,cover=4.80417633
+					18:leaf=0.0919906124,cover=58.0063362
+			10:[time_spend_company<7] yes=19,no=20,missing=20,gain=12.3290157,cover=65.0998306
+				19:[number_project<4] yes=21,no=22,missing=22,gain=10.0165462,cover=38.0193977
+					21:leaf=-0.100000001,cover=9.43765354
+					22:leaf=0.00717861811,cover=28.5817451
+				20:leaf=-0.100000001,cover=27.0804348
+booster[21]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=158.375824,cover=824.91394
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=47.5168762,cover=243.410889
+		5:leaf=0.100000001,cover=46.2239265
+		6:[number_project<3] yes=7,no=8,missing=8,gain=81.5690536,cover=197.186966
+			7:[satisfaction_level<0.360000014] yes=13,no=14,missing=14,gain=25.7431641,cover=93.2584152
+				13:[average_montly_hours<235] yes=41,no=42,missing=42,gain=0.185266495,cover=8.15812302
+					41:leaf=-0.100000001,cover=7.00455809
+					42:leaf=-0.0188784655,cover=1.15356469
+				14:[average_montly_hours<162] yes=17,no=18,missing=18,gain=13.7699356,cover=85.100296
+					17:leaf=0.0921222195,cover=81.4220657
+					18:leaf=-0.0875505731,cover=3.678231
+			8:[average_montly_hours<288] yes=21,no=22,missing=22,gain=6.8494873,cover=103.928543
+				21:[number_project<7] yes=23,no=24,missing=24,gain=4.741539,cover=102.026939
+					23:leaf=-0.0678669885,cover=100.841324
+					24:leaf=0.0855025351,cover=1.18561721
+				22:leaf=0.0934423655,cover=1.90160561
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=97.0331116,cover=581.503052
+		3:[number_project<6] yes=19,no=20,missing=20,gain=11.4903564,cover=445.799927
+			19:[number_project<3] yes=25,no=26,missing=26,gain=4.32626343,cover=432.860382
+				25:[average_montly_hours<253] yes=27,no=28,missing=28,gain=4.60311127,cover=28.1963882
+					27:leaf=-0.0778959915,cover=21.6875896
+					28:leaf=0.0143642453,cover=6.5087986
+				26:[time_spend_company<4] yes=33,no=34,missing=34,gain=1.71658325,cover=404.663971
+					33:leaf=-0.100000001,cover=340.635925
+					34:leaf=-0.0788220316,cover=64.0280609
+			20:[satisfaction_level<0.819999993] yes=29,no=30,missing=30,gain=3.41756415,cover=12.9395485
+				29:[average_montly_hours<131] yes=31,no=32,missing=32,gain=2.79142952,cover=9.96917915
+					31:leaf=-0.0693541542,cover=1.55025506
+					32:leaf=0.0488001369,cover=8.41892433
+				30:leaf=-0.0833118632,cover=2.97036934
+		4:[average_montly_hours<217] yes=9,no=10,missing=10,gain=40.8090973,cover=135.703125
+			9:[time_spend_company<6] yes=35,no=36,missing=36,gain=0.88583374,cover=41.8752022
+				35:[number_project<4] yes=37,no=38,missing=38,gain=4.01388502,cover=15.8619795
+					37:leaf=0.011085825,cover=5.59103632
+					38:leaf=-0.0893248767,cover=10.2709427
+				36:[number_project<5] yes=39,no=40,missing=40,gain=1.13677788,cover=26.0132217
+					39:leaf=-0.100000001,cover=20.5145493
+					40:leaf=-0.0392532088,cover=5.49867249
+			10:[time_spend_company<7] yes=11,no=12,missing=12,gain=32.2657166,cover=93.8279266
+				11:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=23.453476,cover=81.6986618
+					15:leaf=-0.0830919072,cover=9.39808846
+					16:leaf=0.0781583041,cover=72.3005676
+				12:leaf=-0.100000001,cover=12.1292667
+booster[22]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=138.778625,cover=783.277527
+	1:[satisfaction_level<0.119999997] yes=3,no=4,missing=4,gain=44.0917892,cover=232.91452
+		3:leaf=0.100000001,cover=42.6191978
+		4:[number_project<3] yes=5,no=6,missing=6,gain=69.7786102,cover=190.295319
+			5:[satisfaction_level<0.360000014] yes=11,no=12,missing=12,gain=22.2137947,cover=89.3078384
+				11:leaf=-0.0895070583,cover=7.87401056
+				12:[average_montly_hours<126] yes=15,no=16,missing=16,gain=14.617588,cover=81.4338303
+					15:leaf=-0.100000001,cover=2.74535441
+					16:leaf=0.0864222273,cover=78.6884766
+			6:[average_montly_hours<288] yes=23,no=24,missing=24,gain=6.11462021,cover=100.987488
+				23:[last_evaluation<1] yes=25,no=26,missing=26,gain=5.43616104,cover=99.1529388
+					25:leaf=-0.0660527423,cover=96.7273483
+					26:leaf=0.0651271939,cover=2.42558908
+				24:leaf=0.0894935206,cover=1.83455014
+	2:[last_evaluation<0.810000002] yes=7,no=8,missing=8,gain=32.0045166,cover=550.362976
+		7:[number_project<6] yes=27,no=28,missing=28,gain=3.0602417,cover=307.627869
+			27:[satisfaction_level<0.49000001] yes=33,no=34,missing=34,gain=2.89047241,cover=296.039764
+				33:[average_montly_hours<252] yes=37,no=38,missing=38,gain=2.53527951,cover=5.38092375
+					37:leaf=-0.0532311164,cover=4.30072975
+					38:leaf=0.0769107565,cover=1.08019364
+				34:[average_montly_hours<281] yes=41,no=42,missing=42,gain=1.8260498,cover=290.658844
+					41:leaf=-0.0984193161,cover=288.223999
+					42:leaf=-0.00485294359,cover=2.43483639
+			28:[average_montly_hours<258] yes=29,no=30,missing=30,gain=5.21254253,cover=11.5881233
+				29:[last_evaluation<0.699999988] yes=31,no=32,missing=32,gain=4.06742334,cover=10.3135319
+					31:leaf=-0.100000001,cover=7.07224941
+					32:leaf=0.0224274658,cover=3.24128246
+				30:leaf=0.100000001,cover=1.27459204
+		8:[number_project<5] yes=9,no=10,missing=10,gain=33.3361549,cover=242.735123
+			9:[satisfaction_level<0.699999988] yes=19,no=20,missing=20,gain=7.74247742,cover=165.85762
+				19:[last_evaluation<1] yes=35,no=36,missing=36,gain=2.66678619,cover=60.091114
+					35:leaf=-0.100000001,cover=57.7718201
+					36:leaf=0.00222324673,cover=2.31929421
+				20:[satisfaction_level<0.920000017] yes=21,no=22,missing=22,gain=12.7626553,cover=105.766502
+					21:leaf=-0.0323810391,cover=81.0310059
+					22:leaf=-0.100000001,cover=24.7355003
+			10:[average_montly_hours<219] yes=13,no=14,missing=14,gain=18.3617783,cover=76.8775101
+				13:[number_project<6] yes=39,no=40,missing=40,gain=1.92470837,cover=23.6439514
+					39:leaf=-0.0759638548,cover=19.0613041
+					40:leaf=-0.00150901254,cover=4.58264875
+				14:[satisfaction_level<0.709999979] yes=17,no=18,missing=18,gain=10.9341669,cover=53.2335587
+					17:leaf=-0.050383687,cover=9.66852951
+					18:leaf=0.0627709925,cover=43.5650291
+booster[23]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=120.431305,cover=726.732117
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=39.3634377,cover=214.955475
+		5:leaf=0.100000001,cover=38.9331017
+		6:[satisfaction_level<0.310000002] yes=7,no=8,missing=8,gain=53.5085793,cover=176.022369
+			7:[last_evaluation<1] yes=19,no=20,missing=20,gain=5.77529526,cover=62.3245163
+				19:[last_evaluation<0.629999995] yes=21,no=22,missing=22,gain=4.87935257,cover=61.1505013
+					21:leaf=-0.0379318111,cover=21.1587334
+					22:leaf=-0.100000001,cover=39.9917679
+				20:leaf=0.0914855823,cover=1.17401528
+			8:[last_evaluation<0.449999988] yes=13,no=14,missing=14,gain=22.7786541,cover=113.697853
+				13:leaf=-0.100000001,cover=8.44417477
+				14:[last_evaluation<0.579999983] yes=15,no=16,missing=16,gain=23.4448204,cover=105.253677
+					15:leaf=0.0808743984,cover=76.5262375
+					16:leaf=-0.0239502732,cover=28.7274399
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=86.6407318,cover=511.776672
+		3:[time_spend_company<4] yes=23,no=24,missing=24,gain=3.70831299,cover=387.088348
+			23:[average_montly_hours<275] yes=25,no=26,missing=26,gain=3.92248535,cover=320.218353
+				25:[satisfaction_level<0.49000001] yes=35,no=36,missing=36,gain=0.673187256,cover=315.313019
+					35:leaf=-0.0448221825,cover=5.16094923
+					36:leaf=-0.100000001,cover=310.152069
+				26:[last_evaluation<0.910000026] yes=27,no=28,missing=28,gain=5.9131794,cover=4.90533352
+					27:leaf=-0.0708477199,cover=3.71362686
+					28:leaf=0.100000001,cover=1.19170654
+			24:[satisfaction_level<0.74000001] yes=29,no=30,missing=30,gain=3.28362274,cover=66.8699799
+				29:[average_montly_hours<248] yes=31,no=32,missing=32,gain=3.80006981,cover=33.6649437
+					31:leaf=-0.0626767948,cover=25.6567478
+					32:leaf=0.0134812463,cover=8.00819588
+				30:[Work_accident<1] yes=37,no=38,missing=38,gain=0.590219498,cover=33.2050323
+					37:leaf=-0.0986266136,cover=28.2638874
+					38:leaf=-0.0418850183,cover=4.94114399
+		4:[time_spend_company<7] yes=9,no=10,missing=10,gain=35.1268005,cover=124.688332
+			9:[average_montly_hours<216] yes=11,no=12,missing=12,gain=23.72365,cover=102.230125
+				11:[average_montly_hours<153] yes=33,no=34,missing=34,gain=2.83144188,cover=24.902113
+					33:leaf=-0.096340321,cover=9.59164906
+					34:leaf=-0.0253364146,cover=15.3104649
+				12:[satisfaction_level<0.930000007] yes=17,no=18,missing=18,gain=15.3009777,cover=77.3280106
+					17:leaf=0.0644736141,cover=74.4041901
+					18:leaf=-0.100000001,cover=2.92382288
+			10:leaf=-0.100000001,cover=22.4582119
+booster[24]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=112.933723,cover=690.601074
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=36.3733292,cover=211.435593
+		5:leaf=0.100000001,cover=37.886261
+		6:[satisfaction_level<0.310000002] yes=7,no=8,missing=8,gain=45.8324928,cover=173.549332
+			7:[last_evaluation<1] yes=21,no=22,missing=22,gain=4.09319115,cover=60.0068398
+				21:[last_evaluation<0.629999995] yes=23,no=24,missing=24,gain=4.72227097,cover=58.5879402
+					23:leaf=-0.0336780548,cover=21.3677444
+					24:leaf=-0.0955883488,cover=37.2201958
+				22:leaf=0.0639874637,cover=1.41890192
+			8:[last_evaluation<0.449999988] yes=11,no=12,missing=12,gain=21.4036942,cover=113.542496
+				11:leaf=-0.100000001,cover=8.29069614
+				12:[average_montly_hours<126] yes=13,no=14,missing=14,gain=21.1751366,cover=105.251801
+					13:leaf=-0.100000001,cover=6.30709124
+					14:leaf=0.0618695132,cover=98.9447098
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=74.9467163,cover=479.165497
+		3:[time_spend_company<4] yes=19,no=20,missing=20,gain=5.70269775,cover=360.723389
+			19:[average_montly_hours<275] yes=25,no=26,missing=26,gain=3.42770386,cover=296.431946
+				25:[satisfaction_level<0.49000001] yes=33,no=34,missing=34,gain=0.942962646,cover=291.296234
+					33:leaf=-0.0366218798,cover=4.55273914
+					34:leaf=-0.0985649303,cover=286.7435
+				26:[last_evaluation<0.910000026] yes=27,no=28,missing=28,gain=5.60963106,cover=5.13570118
+					27:leaf=-0.0715590343,cover=3.87289071
+					28:leaf=0.100000001,cover=1.26281047
+			20:[satisfaction_level<0.850000024] yes=29,no=30,missing=30,gain=2.9947319,cover=64.2914352
+				29:[average_montly_hours<156] yes=31,no=32,missing=32,gain=3.15828514,cover=45.7071266
+					31:leaf=-0.0918274671,cover=10.4121037
+					32:leaf=-0.0288356282,cover=35.2950249
+				30:[average_montly_hours<155] yes=35,no=36,missing=36,gain=0.869094849,cover=18.5843105
+					35:leaf=-0.0252207015,cover=2.77805734
+					36:leaf=-0.100000001,cover=15.8062525
+		4:[time_spend_company<7] yes=9,no=10,missing=10,gain=29.2940559,cover=118.442116
+			9:[satisfaction_level<0.930000007] yes=15,no=16,missing=16,gain=20.666256,cover=98.5556107
+				15:[satisfaction_level<0.699999988] yes=17,no=18,missing=18,gain=25.1213608,cover=91.6544037
+					17:leaf=-0.0673942491,cover=17.5002213
+					18:leaf=0.062855348,cover=74.1541824
+				16:leaf=-0.100000001,cover=6.90120602
+			10:leaf=-0.100000001,cover=19.886507
+booster[25]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=104.451416,cover=653.788879
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=32.9237366,cover=209.333008
+		5:leaf=0.100000001,cover=34.3026772
+		6:[number_project<3] yes=7,no=8,missing=8,gain=45.2305756,cover=175.030334
+			7:[satisfaction_level<0.360000014] yes=11,no=12,missing=12,gain=16.4316883,cover=78.3573685
+				11:[time_spend_company<4] yes=41,no=42,missing=42,gain=0.779185295,cover=6.72899103
+					41:leaf=-0.100000001,cover=4.67299652
+					42:leaf=-0.0154448869,cover=2.05599451
+				12:[time_spend_company<4] yes=17,no=18,missing=18,gain=10.4053459,cover=71.6283798
+					17:leaf=0.0801818222,cover=67.5717468
+					18:leaf=-0.0709593892,cover=4.05663395
+			8:[number_project<7] yes=25,no=26,missing=26,gain=4.65210915,cover=96.672966
+				25:[satisfaction_level<0.270000011] yes=27,no=28,missing=28,gain=4.2722435,cover=95.2522125
+					27:leaf=-0.0704532489,cover=45.6553841
+					28:leaf=-0.0269211736,cover=49.5968285
+				26:leaf=0.0936517939,cover=1.42075133
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=72.1513977,cover=444.455872
+		3:[number_project<6] yes=15,no=16,missing=16,gain=11.3068237,cover=330.533539
+			15:[number_project<3] yes=33,no=34,missing=34,gain=2.24645996,cover=319.419952
+				33:[satisfaction_level<0.610000014] yes=39,no=40,missing=40,gain=1.14123583,cover=21.0524025
+					39:leaf=-0.0931371823,cover=6.00006247
+					40:leaf=-0.0366276167,cover=15.0523396
+				34:[time_spend_company<4] yes=35,no=36,missing=36,gain=1.54211426,cover=298.367554
+					35:leaf=-0.100000001,cover=247.919647
+					36:leaf=-0.0757417232,cover=50.4478989
+			16:[satisfaction_level<0.819999993] yes=31,no=32,missing=32,gain=2.66887021,cover=11.113595
+				31:[satisfaction_level<0.680000007] yes=37,no=38,missing=38,gain=1.15758443,cover=8.94611073
+					37:leaf=-0,cover=5.11855078
+					38:leaf=0.0675111264,cover=3.82755995
+				32:leaf=-0.072843954,cover=2.16748428
+		4:[time_spend_company<6] yes=9,no=10,missing=10,gain=26.6898251,cover=113.922318
+			9:[last_evaluation<0.810000002] yes=13,no=14,missing=14,gain=13.3780508,cover=63.0240669
+				13:[satisfaction_level<0.810000002] yes=29,no=30,missing=30,gain=3.34410715,cover=14.29146
+					29:leaf=-8.8035471e-05,cover=9.38652039
+					30:leaf=-0.0972324684,cover=4.90493965
+				14:[satisfaction_level<0.699999988] yes=19,no=20,missing=20,gain=10.0415745,cover=48.7326088
+					19:leaf=-0.0708848536,cover=3.86590219
+					20:leaf=0.0826791525,cover=44.8667068
+			10:[number_project<4] yes=21,no=22,missing=22,gain=8.92259884,cover=50.8982506
+				21:leaf=-0.100000001,cover=15.62572
+				22:[time_spend_company<7] yes=23,no=24,missing=24,gain=9.94477367,cover=35.2725296
+					23:leaf=0.0116428528,cover=25.2959766
+					24:leaf=-0.100000001,cover=9.97655201
+booster[26]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=90.7641296,cover=612.335632
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=31.1827698,cover=187.311996
+		5:leaf=0.100000001,cover=32.4846802
+		6:[number_project<3] yes=7,no=8,missing=8,gain=39.5388031,cover=154.827316
+			7:[last_evaluation<0.579999983] yes=11,no=12,missing=12,gain=18.2004509,cover=72.4496613
+				11:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=12.7113266,cover=63.3010979
+					17:leaf=-0.0995210186,cover=3.23188114
+					18:leaf=0.0822227225,cover=60.0692177
+				12:[time_spend_company<4] yes=35,no=36,missing=36,gain=1.13055801,cover=9.14856052
+					35:leaf=-0.100000001,cover=5.17659235
+					36:leaf=-0.0216739886,cover=3.97196794
+			8:[number_project<7] yes=25,no=26,missing=26,gain=4.50030327,cover=82.3776627
+				25:[satisfaction_level<0.270000011] yes=27,no=28,missing=28,gain=5.00217628,cover=80.9870453
+					27:leaf=-0.0751787499,cover=42.9513779
+					28:leaf=-0.024207104,cover=38.0356636
+				26:leaf=0.0893238112,cover=1.39061964
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=59.1162567,cover=425.023621
+		3:[time_spend_company<4] yes=19,no=20,missing=20,gain=5.68269348,cover=314.123016
+			19:[number_project<3] yes=21,no=22,missing=22,gain=5.50608826,cover=254.856461
+				21:[last_evaluation<0.779999971] yes=23,no=24,missing=24,gain=5.99320745,cover=17.8597469
+					23:leaf=-0.0778042078,cover=11.6014967
+					24:leaf=0.0368462875,cover=6.25825024
+				22:[number_project<6] yes=31,no=32,missing=32,gain=3.75767517,cover=236.996719
+					31:leaf=-0.100000001,cover=231.732285
+					32:leaf=-0.0106582595,cover=5.26443672
+			20:[satisfaction_level<0.49000001] yes=29,no=30,missing=30,gain=4.27630043,cover=59.2665367
+				29:leaf=0.056033235,cover=2.32794237
+				30:[satisfaction_level<0.850000024] yes=33,no=34,missing=34,gain=2.34176826,cover=56.9385948
+					33:leaf=-0.0481855348,cover=41.0207214
+					34:leaf=-0.0968931392,cover=15.9178715
+		4:[time_spend_company<7] yes=9,no=10,missing=10,gain=23.6880302,cover=110.900604
+			9:[satisfaction_level<0.930000007] yes=13,no=14,missing=14,gain=17.4282761,cover=92.7741852
+				13:[satisfaction_level<0.720000029] yes=15,no=16,missing=16,gain=19.6505375,cover=85.9533691
+					15:leaf=-0.0577949397,cover=18.5946999
+					16:leaf=0.0558916405,cover=67.3586655
+				14:leaf=-0.100000001,cover=6.82081604
+			10:leaf=-0.100000001,cover=18.1264248
+booster[27]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=77.4625778,cover=577.55896
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=28.6172218,cover=187.390503
+		5:leaf=0.100000001,cover=29.2622242
+		6:[number_project<3] yes=7,no=8,missing=8,gain=32.4389458,cover=158.128281
+			7:[satisfaction_level<0.360000014] yes=11,no=12,missing=12,gain=15.0218163,cover=69.4271317
+				11:[average_montly_hours<243] yes=41,no=42,missing=42,gain=0.251514912,cover=6.84502029
+					41:leaf=-0.0909269676,cover=5.83643484
+					42:leaf=-0.0102358181,cover=1.00858533
+				12:[average_montly_hours<122] yes=15,no=16,missing=16,gain=10.9888077,cover=62.5821075
+					15:leaf=-0.100000001,cover=2.49033451
+					16:leaf=0.0733646974,cover=60.091774
+			8:[average_montly_hours<288] yes=25,no=26,missing=26,gain=3.89091682,cover=88.701149
+				25:[number_project<7] yes=27,no=28,missing=28,gain=3.9983139,cover=87.1432724
+					27:leaf=-0.0484742746,cover=85.7858734
+					28:leaf=0.0853750259,cover=1.35739911
+				26:leaf=0.0812513083,cover=1.55787551
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=57.6741638,cover=390.168457
+		3:[number_project<6] yes=19,no=20,missing=20,gain=8.3769989,cover=283.9935
+			19:[number_project<3] yes=29,no=30,missing=30,gain=2.96769714,cover=272.797485
+				29:[average_montly_hours<253] yes=31,no=32,missing=32,gain=3.30761433,cover=19.7751522
+					31:leaf=-0.0701409206,cover=14.9431229
+					32:leaf=0.0195415579,cover=4.83202934
+				30:[time_spend_company<4] yes=37,no=38,missing=38,gain=1.88722229,cover=253.022339
+					37:leaf=-0.0979050696,cover=207.772217
+					38:leaf=-0.0700429901,cover=45.2501373
+			20:[satisfaction_level<0.74000001] yes=33,no=34,missing=34,gain=2.77489018,cover=11.1960001
+				33:[average_montly_hours<266] yes=35,no=36,missing=36,gain=2.66176105,cover=6.73428535
+					35:leaf=0.0676410496,cover=5.38407373
+					36:leaf=-0.0580944829,cover=1.3502115
+				34:[average_montly_hours<162] yes=39,no=40,missing=40,gain=1.62715065,cover=4.46171522
+					39:leaf=0.0244879145,cover=1.19552231
+					40:leaf=-0.0868658945,cover=3.26619291
+		4:[time_spend_company<6] yes=9,no=10,missing=10,gain=24.8686314,cover=106.174973
+			9:[average_montly_hours<153] yes=13,no=14,missing=14,gain=14.7855177,cover=60.4725571
+				13:leaf=-0.100000001,cover=5.55815363
+				14:[satisfaction_level<0.660000026] yes=17,no=18,missing=18,gain=9.37941742,cover=54.914402
+					17:leaf=-0.0677558407,cover=4.57752895
+					18:leaf=0.0703261122,cover=50.3368721
+			10:[number_project<4] yes=21,no=22,missing=22,gain=6.59360695,cover=45.7024155
+				21:leaf=-0.100000001,cover=13.9503603
+				22:[time_spend_company<7] yes=23,no=24,missing=24,gain=7.10795307,cover=31.7520542
+					23:leaf=0.00254415511,cover=22.7728634
+					24:leaf=-0.0981634632,cover=8.97919178
+booster[28]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=67.5082092,cover=545.993896
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=26.0227127,cover=179.631058
+		5:leaf=0.100000001,cover=26.1553173
+		6:[number_project<3] yes=7,no=8,missing=8,gain=29.0084476,cover=153.475739
+			7:[last_evaluation<0.579999983] yes=11,no=12,missing=12,gain=13.9271526,cover=66.0579529
+				11:[average_montly_hours<162] yes=13,no=14,missing=14,gain=14.4287491,cover=56.1313782
+					13:leaf=0.0783886239,cover=53.1837921
+					14:leaf=-0.100000001,cover=2.94758272
+				12:[average_montly_hours<198] yes=27,no=28,missing=28,gain=4.15339279,cover=9.92657566
+					27:leaf=-0.0957091302,cover=7.08509016
+					28:leaf=0.0336127505,cover=2.8414855
+			8:[average_montly_hours<288] yes=25,no=26,missing=26,gain=4.38918686,cover=87.417778
+				25:[number_project<7] yes=29,no=30,missing=30,gain=3.67074013,cover=85.6806107
+					29:leaf=-0.0475367717,cover=84.3586273
+					30:leaf=0.0817505047,cover=1.32197964
+				26:leaf=0.0853374079,cover=1.73717344
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=51.9875336,cover=366.362854
+		3:[number_project<6] yes=23,no=24,missing=24,gain=5.15943909,cover=263.009064
+			23:[time_spend_company<4] yes=31,no=32,missing=32,gain=2.45281982,cover=251.885117
+				31:[average_montly_hours<275] yes=33,no=34,missing=34,gain=2.58760071,cover=206.173416
+					33:leaf=-0.0951149091,cover=202.630188
+					34:leaf=-0.00453216024,cover=3.54323936
+				32:[number_project<5] yes=39,no=40,missing=40,gain=1.91155434,cover=45.7116966
+					39:leaf=-0.0750570148,cover=35.0098648
+					40:leaf=-0.0225627944,cover=10.701828
+			24:[average_montly_hours<252] yes=35,no=36,missing=36,gain=2.08640862,cover=11.1239319
+				35:[average_montly_hours<190] yes=41,no=42,missing=42,gain=1.84472001,cover=8.42895508
+					41:leaf=-0,cover=5.09567738
+					42:leaf=-0.0885683,cover=3.3332777
+				36:[average_montly_hours<266] yes=37,no=38,missing=38,gain=4.47247839,cover=2.69497681
+					37:leaf=0.100000001,cover=1.20537293
+					38:leaf=-0.0587600842,cover=1.48960388
+		4:[time_spend_company<6] yes=9,no=10,missing=10,gain=18.5890541,cover=103.35379
+			9:[average_montly_hours<153] yes=15,no=16,missing=16,gain=11.7528257,cover=58.0262299
+				15:leaf=-0.0980202183,cover=5.01138639
+				16:[satisfaction_level<0.660000026] yes=17,no=18,missing=18,gain=8.87416935,cover=53.014843
+					17:leaf=-0.0697193369,cover=4.73309135
+					18:leaf=0.0628008172,cover=48.2817535
+			10:[number_project<4] yes=19,no=20,missing=20,gain=7.64396477,cover=45.3275604
+				19:[satisfaction_level<0.579999983] yes=43,no=44,missing=44,gain=0.129062653,cover=13.0570574
+					43:leaf=-0.0309591834,cover=1.78826451
+					44:leaf=-0.100000001,cover=11.2687922
+				20:[time_spend_company<7] yes=21,no=22,missing=22,gain=7.03709888,cover=32.2705002
+					21:leaf=0.00634315237,cover=24.2802181
+					22:leaf=-0.096679844,cover=7.99028301
+booster[29]:
+0:[average_montly_hours<288] yes=1,no=2,missing=2,gain=27.6302643,cover=516.677429
+	1:[number_project<3] yes=3,no=4,missing=4,gain=28.3160782,cover=505.188446
+		3:[average_montly_hours<162] yes=9,no=10,missing=10,gain=21.8351192,cover=87.845871
+			9:[average_montly_hours<127] yes=11,no=12,missing=12,gain=18.0658073,cover=62.4555969
+				11:leaf=-0.100000001,cover=6.06775331
+				12:[time_spend_company<3] yes=15,no=16,missing=16,gain=11.280962,cover=56.3878441
+					15:leaf=-0.0953865275,cover=3.33743024
+					16:leaf=0.074154757,cover=53.050415
+			10:[Work_accident<1] yes=19,no=20,missing=20,gain=3.72637272,cover=25.390274
+				19:[average_montly_hours<247] yes=25,no=26,missing=26,gain=2.4957099,cover=19.6665401
+					25:leaf=-0.0621285103,cover=12.3888197
+					26:leaf=0.00850446057,cover=7.27771997
+				20:leaf=-0.100000001,cover=5.72373486
+		4:[time_spend_company<4] yes=5,no=6,missing=6,gain=60.1408234,cover=417.34259
+			5:[number_project<6] yes=17,no=18,missing=18,gain=4.5252533,cover=214.223694
+				17:[last_evaluation<1] yes=27,no=28,missing=28,gain=0.583694458,cover=202.844177
+					27:leaf=-0.0906539708,cover=200.221909
+					28:leaf=-0.0242672991,cover=2.62227583
+				18:[last_evaluation<0.74000001] yes=23,no=24,missing=24,gain=3.53891826,cover=11.379508
+					23:leaf=-0.0719686225,cover=5.72730112
+					24:leaf=0.0309308171,cover=5.65220642
+			6:[average_montly_hours<217] yes=7,no=8,missing=8,gain=29.6193638,cover=203.118896
+				7:[average_montly_hours<153] yes=21,no=22,missing=22,gain=3.71832848,cover=80.8213806
+					21:leaf=-0.0875360221,cover=27.1747112
+					22:leaf=-0.0402658284,cover=53.6466675
+				8:[time_spend_company<7] yes=13,no=14,missing=14,gain=14.681881,cover=122.297516
+					13:leaf=0.0303390212,cover=113.61396
+					14:leaf=-0.09789332,cover=8.68356037
+	2:leaf=0.100000001,cover=11.4889994
+booster[30]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=57.7336426,cover=492.676575
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=21.0702019,cover=164.41011
+		5:leaf=0.100000001,cover=23.5626087
+		6:[satisfaction_level<0.310000002] yes=7,no=8,missing=8,gain=23.6970539,cover=140.847504
+			7:[satisfaction_level<0.150000006] yes=19,no=20,missing=20,gain=5.23291111,cover=46.9789429
+				19:[average_montly_hours<176] yes=21,no=22,missing=22,gain=4.9205718,cover=8.10565472
+					21:leaf=0.100000001,cover=2.71183538
+					22:leaf=-0.0391034298,cover=5.39381886
+				20:[last_evaluation<0.469999999] yes=29,no=30,missing=30,gain=3.2321167,cover=38.873291
+					29:leaf=0.00878312904,cover=4.11081219
+					30:leaf=-0.0807651207,cover=34.7624779
+			8:[average_montly_hours<126] yes=11,no=12,missing=12,gain=15.6733408,cover=93.8685532
+				11:leaf=-0.100000001,cover=6.45546913
+				12:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=13.8792038,cover=87.4130859
+					17:leaf=-0.100000001,cover=5.26011419
+					18:leaf=0.0522049777,cover=82.1529694
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=41.0177689,cover=328.266449
+		3:[time_spend_company<4] yes=23,no=24,missing=24,gain=4.52841187,cover=230.859268
+			23:[average_montly_hours<275] yes=25,no=26,missing=26,gain=4.29110718,cover=182.025909
+				25:[promotion_last_5years<1] yes=41,no=42,missing=42,gain=0.220626831,cover=178.112183
+					41:leaf=-0.089767091,cover=174.388519
+					42:leaf=-0.0390105397,cover=3.72367382
+				26:[last_evaluation<0.910000026] yes=27,no=28,missing=28,gain=3.72739315,cover=3.91372967
+					27:leaf=-0.0524710491,cover=2.58851647
+					28:leaf=0.100000001,cover=1.32521307
+			24:[average_montly_hours<183] yes=31,no=32,missing=32,gain=2.46883106,cover=48.8333549
+				31:[average_montly_hours<154] yes=33,no=34,missing=34,gain=7.36959219,cover=16.6766853
+					33:leaf=-0.0754870325,cover=8.86718369
+					34:leaf=0.0502961762,cover=7.80950212
+				32:[satisfaction_level<0.629999995] yes=39,no=40,missing=40,gain=1.95426941,cover=32.1566696
+					39:leaf=-0.0208637044,cover=8.76283741
+					40:leaf=-0.0807810128,cover=23.3938313
+		4:[average_montly_hours<216] yes=9,no=10,missing=10,gain=17.7245197,cover=97.4071884
+			9:[satisfaction_level<0.74000001] yes=35,no=36,missing=36,gain=2.12134171,cover=29.0229664
+				35:[time_spend_company<6] yes=37,no=38,missing=38,gain=2.99125075,cover=13.5707579
+					37:leaf=0.0175490361,cover=6.04585171
+					38:leaf=-0.0710512698,cover=7.52490616
+				36:leaf=-0.0911872983,cover=15.4522085
+			10:[satisfaction_level<0.930000007] yes=13,no=14,missing=14,gain=14.6290855,cover=68.3842239
+				13:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=18.06147,cover=63.8132019
+					15:leaf=-0.0856103376,cover=8.931674
+					16:leaf=0.0610409863,cover=54.8815308
+				14:leaf=-0.100000001,cover=4.5710206
+booster[31]:
+0:[satisfaction_level<0.479999989] yes=1,no=2,missing=2,gain=46.7985687,cover=465.270996
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=20.1843166,cover=151.331055
+		5:leaf=0.100000001,cover=21.1429806
+		6:[satisfaction_level<0.310000002] yes=7,no=8,missing=8,gain=22.6718426,cover=130.18808
+			7:[last_evaluation<0.629999995] yes=21,no=22,missing=22,gain=3.68758011,cover=44.2479362
+				21:[last_evaluation<0.610000014] yes=27,no=28,missing=28,gain=2.89833808,cover=16.6575108
+					27:leaf=-0.0376844145,cover=14.5010128
+					28:leaf=0.0674499944,cover=2.15649796
+				22:[average_montly_hours<139] yes=39,no=40,missing=40,gain=1.06200409,cover=27.5904274
+					39:leaf=-0.00417807838,cover=2.00102329
+					40:leaf=-0.0875194669,cover=25.5894032
+			8:[average_montly_hours<126] yes=11,no=12,missing=12,gain=13.5095539,cover=85.9401398
+				11:leaf=-0.100000001,cover=5.75856781
+				12:[last_evaluation<0.449999988] yes=13,no=14,missing=14,gain=13.4195032,cover=80.181572
+					13:leaf=-0.100000001,cover=5.45530653
+					14:leaf=0.0497725122,cover=74.726265
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=37.4604416,cover=313.939941
+		3:[time_spend_company<4] yes=19,no=20,missing=20,gain=3.79769897,cover=219.313232
+			19:[average_montly_hours<275] yes=33,no=34,missing=34,gain=1.45381165,cover=171.501434
+				33:[satisfaction_level<0.49000001] yes=43,no=44,missing=44,gain=0.613777161,cover=167.861603
+					43:leaf=-0.0336741544,cover=4.41888237
+					44:leaf=-0.0876784474,cover=163.442719
+				34:[last_evaluation<0.689999998] yes=35,no=36,missing=36,gain=1.49370134,cover=3.63983083
+					35:leaf=-0.0660948753,cover=1.76063526
+					36:leaf=0.0365666263,cover=1.87919545
+			20:[satisfaction_level<0.850000024] yes=23,no=24,missing=24,gain=3.01661396,cover=47.8118095
+				23:[satisfaction_level<0.810000002] yes=29,no=30,missing=30,gain=2.78455687,cover=35.1174622
+					29:leaf=-0.0419938862,cover=32.3280907
+					30:leaf=0.0491647944,cover=2.78937173
+				24:[average_montly_hours<139] yes=41,no=42,missing=42,gain=0.72386837,cover=12.6943464
+					41:leaf=-0.000779305294,cover=1.04978156
+					42:leaf=-0.0982184559,cover=11.6445646
+		4:[average_montly_hours<217] yes=9,no=10,missing=10,gain=16.2509022,cover=94.626709
+			9:[last_evaluation<0.99000001] yes=31,no=32,missing=32,gain=1.64429855,cover=26.827774
+				31:[last_evaluation<0.660000026] yes=37,no=38,missing=38,gain=1.41895962,cover=25.5212345
+					37:leaf=-0.0363402776,cover=10.0674801
+					38:leaf=-0.0922637656,cover=15.4537544
+				32:leaf=0.0230541732,cover=1.30653882
+			10:[satisfaction_level<0.709999979] yes=15,no=16,missing=16,gain=12.8185759,cover=67.7989349
+				15:[average_montly_hours<273] yes=25,no=26,missing=26,gain=2.91960716,cover=9.69541264
+					25:leaf=-0.100000001,cover=8.06759834
+					26:leaf=0.0273338892,cover=1.62781417
+				16:[satisfaction_level<0.930000007] yes=17,no=18,missing=18,gain=14.4319391,cover=58.1035194
+					17:leaf=0.0560502298,cover=54.0146255
+					18:leaf=-0.100000001,cover=4.08889532
+booster[32]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=39.4182587,cover=441.280518
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=17.7020893,cover=151.47319
+		5:leaf=0.099426955,cover=19.0014172
+		6:[average_montly_hours<161] yes=7,no=8,missing=8,gain=17.4211006,cover=132.471771
+			7:[average_montly_hours<126] yes=9,no=10,missing=10,gain=18.9259453,cover=68.0249939
+				9:leaf=-0.100000001,cover=7.69247818
+				10:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=7.66385078,cover=60.3325157
+					17:leaf=-0.0903394148,cover=2.63421369
+					18:leaf=0.0609609671,cover=57.6983032
+			8:[last_evaluation<0.99000001] yes=21,no=22,missing=22,gain=6.11583614,cover=64.4467697
+				21:[average_montly_hours<288] yes=27,no=28,missing=28,gain=5.38102627,cover=61.1306038
+					27:leaf=-0.0519062243,cover=59.2836151
+					28:leaf=0.0903169364,cover=1.84698796
+				22:[time_spend_company<5] yes=31,no=32,missing=32,gain=4.27955484,cover=3.31616974
+					31:leaf=0.100000001,cover=2.26882625
+					32:leaf=-0.060795933,cover=1.04734349
+	2:[time_spend_company<4] yes=3,no=4,missing=4,gain=32.894455,cover=289.807343
+		3:[number_project<6] yes=19,no=20,missing=20,gain=6.22719574,cover=154.793961
+			19:[number_project<3] yes=29,no=30,missing=30,gain=4.95187378,cover=149.595047
+				29:[average_montly_hours<240] yes=33,no=34,missing=34,gain=3.66053033,cover=11.836113
+					33:leaf=-0.0588823222,cover=7.81907701
+					34:leaf=0.048121836,cover=4.01703548
+				30:[average_montly_hours<275] yes=39,no=40,missing=40,gain=1.42912292,cover=137.758942
+					39:leaf=-0.0926418602,cover=135.998932
+					40:leaf=-0,cover=1.75999808
+			20:[last_evaluation<0.629999995] yes=35,no=36,missing=36,gain=2.78167605,cover=5.19891787
+				35:leaf=-0.0637924671,cover=1.60204816
+				36:[satisfaction_level<0.639999986] yes=41,no=42,missing=42,gain=0.367169976,cover=3.59686995
+					41:leaf=0.0023865921,cover=1.09454274
+					42:leaf=0.0817846209,cover=2.5023272
+		4:[last_evaluation<0.810000002] yes=11,no=12,missing=12,gain=17.0602913,cover=135.013382
+			11:[average_montly_hours<263] yes=23,no=24,missing=24,gain=5.64304733,cover=53.1650314
+				23:[average_montly_hours<181] yes=37,no=38,missing=38,gain=2.40884209,cover=47.2591133
+					37:leaf=-0.0383645408,cover=19.1307755
+					38:leaf=-0.0887530968,cover=28.128336
+				24:[satisfaction_level<0.620000005] yes=25,no=26,missing=26,gain=5.65105247,cover=5.9059186
+					25:leaf=0.100000001,cover=2.23853731
+					26:leaf=-0.0460747853,cover=3.66738105
+			12:[satisfaction_level<0.930000007] yes=13,no=14,missing=14,gain=14.4453621,cover=81.8483505
+				13:[satisfaction_level<0.699999988] yes=15,no=16,missing=16,gain=12.2730055,cover=75.0243683
+					15:leaf=-0.0461933352,cover=16.6889572
+					16:leaf=0.0487841442,cover=58.3354149
+				14:leaf=-0.100000001,cover=6.82397509
+booster[33]:
+0:[satisfaction_level<0.469999999] yes=1,no=2,missing=2,gain=35.5581665,cover=422.676941
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=16.0942593,cover=137.210953
+		5:leaf=0.0986535847,cover=17.9968586
+		6:[satisfaction_level<0.310000002] yes=9,no=10,missing=10,gain=15.0296936,cover=119.214096
+			9:[last_evaluation<1] yes=19,no=20,missing=20,gain=3.9990654,cover=41.8158913
+				19:[last_evaluation<0.629999995] yes=21,no=22,missing=22,gain=4.08089447,cover=40.5032425
+					21:leaf=-0.0139771421,cover=16.401165
+					22:leaf=-0.0799782053,cover=24.1020775
+				20:leaf=0.0828485191,cover=1.31265032
+			10:[last_evaluation<0.449999988] yes=15,no=16,missing=16,gain=9.93319988,cover=77.3982086
+				15:leaf=-0.0965791866,cover=5.16828394
+				16:[average_montly_hours<126] yes=17,no=18,missing=18,gain=9.24877548,cover=72.2299194
+					17:leaf=-0.100000001,cover=3.72486591
+					18:leaf=0.0445352532,cover=68.5050583
+	2:[time_spend_company<4] yes=3,no=4,missing=4,gain=31.746666,cover=285.465973
+		3:[average_montly_hours<275] yes=23,no=24,missing=24,gain=3.5478363,cover=150.214035
+			23:[satisfaction_level<0.860000014] yes=27,no=28,missing=28,gain=0.479904175,cover=146.305862
+				27:[satisfaction_level<0.850000024] yes=29,no=30,missing=30,gain=2.46936798,cover=110.514503
+					29:leaf=-0.0787530765,cover=108.267929
+					30:leaf=0.0171309728,cover=2.24657249
+				28:leaf=-0.0984390751,cover=35.7913666
+			24:[last_evaluation<0.910000026] yes=25,no=26,missing=26,gain=3.12082982,cover=3.90817142
+				25:leaf=-0.0506027341,cover=2.50239944
+				26:leaf=0.0970890746,cover=1.40577197
+		4:[satisfaction_level<0.930000007] yes=7,no=8,missing=8,gain=15.5443029,cover=135.251938
+			7:[average_montly_hours<153] yes=11,no=12,missing=12,gain=12.500349,cover=122.218719
+				11:[satisfaction_level<0.889999986] yes=31,no=32,missing=32,gain=0.350125313,cover=15.2357922
+					31:leaf=-0.0881225243,cover=13.9725142
+					32:leaf=-0.0112219928,cover=1.26327777
+				12:[time_spend_company<7] yes=13,no=14,missing=14,gain=11.2907839,cover=106.982925
+					13:leaf=0.0204423144,cover=98.7389603
+					14:leaf=-0.0950327069,cover=8.24396896
+			8:leaf=-0.100000001,cover=13.0332165
+booster[34]:
+0:[satisfaction_level<0.119999997] yes=1,no=2,missing=2,gain=27.7258797,cover=403.135162
+	1:leaf=0.09748099,cover=15.8296928
+	2:[number_project<3] yes=3,no=4,missing=4,gain=18.8759956,cover=387.305481
+		3:[Work_accident<1] yes=7,no=8,missing=8,gain=13.6713829,cover=71.2156067
+			7:[last_evaluation<0.449999988] yes=13,no=14,missing=14,gain=7.75303555,cover=62.5562019
+				13:leaf=-0.0918849558,cover=3.91205859
+				14:[last_evaluation<0.589999974] yes=15,no=16,missing=16,gain=8.4558239,cover=58.6441422
+					15:leaf=0.0644805729,cover=40.0461731
+					16:leaf=-0.0157050621,cover=18.5979691
+			8:[average_montly_hours<157] yes=23,no=24,missing=24,gain=1.69170856,cover=8.65940189
+				23:[last_evaluation<0.560000002] yes=25,no=26,missing=26,gain=0.761623323,cover=3.40796518
+					25:leaf=0.015017963,cover=2.098593
+					26:leaf=-0.0606778525,cover=1.30937195
+				24:leaf=-0.100000001,cover=5.25143719
+		4:[time_spend_company<4] yes=5,no=6,missing=6,gain=29.0967522,cover=316.089874
+			5:[satisfaction_level<0.370000005] yes=17,no=18,missing=18,gain=7.31342316,cover=152.045547
+				17:[satisfaction_level<0.310000002] yes=21,no=22,missing=22,gain=2.94540095,cover=14.0486708
+					21:leaf=-0.0401823968,cover=8.76382256
+					22:leaf=0.0474634133,cover=5.28484821
+				18:[number_project<6] yes=19,no=20,missing=20,gain=4.68115997,cover=137.996872
+					19:leaf=-0.0864579007,cover=131.780502
+					20:leaf=0.00064529042,cover=6.21638107
+			6:[satisfaction_level<0.930000007] yes=9,no=10,missing=10,gain=12.1230783,cover=164.044327
+				9:[satisfaction_level<0.699999988] yes=11,no=12,missing=12,gain=14.0073929,cover=153.065155
+					11:leaf=-0.0368042104,cover=77.0730133
+					12:leaf=0.0232884418,cover=75.9921341
+				10:leaf=-0.100000001,cover=10.9791822
+booster[35]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=26.1254101,cover=387.898987
+	1:[time_spend_company<6] yes=5,no=6,missing=6,gain=16.5877972,cover=137.203964
+		5:[satisfaction_level<0.150000006] yes=11,no=12,missing=12,gain=11.2089653,cover=124.414169
+			11:[last_evaluation<0.620000005] yes=33,no=34,missing=34,gain=1.67905617,cover=20.9940987
+				33:[satisfaction_level<0.140000001] yes=41,no=42,missing=42,gain=0.725528479,cover=2.77143764
+					41:leaf=-0.0301048495,cover=1.51103461
+					42:leaf=0.0475276411,cover=1.26040304
+				34:[time_spend_company<5] yes=35,no=36,missing=36,gain=1.9063797,cover=18.222662
+					35:leaf=0.100000001,cover=15.2876949
+					36:leaf=0.0105543574,cover=2.93496656
+			12:[number_project<3] yes=13,no=14,missing=14,gain=10.7048979,cover=103.420074
+				13:[satisfaction_level<0.360000014] yes=19,no=20,missing=20,gain=7.95566463,cover=48.8869362
+					19:leaf=-0.0722284168,cover=4.7561655
+					20:leaf=0.0532009415,cover=44.1307716
+				14:[last_evaluation<0.949999988] yes=27,no=28,missing=28,gain=3.43619847,cover=54.5331345
+					27:leaf=-0.0335324742,cover=48.1363716
+					28:leaf=0.0396804772,cover=6.39676428
+		6:[satisfaction_level<0.469999999] yes=43,no=44,missing=44,gain=0.300987244,cover=12.789793
+			43:leaf=-0.100000001,cover=11.6648207
+			44:leaf=-0.015216588,cover=1.12497211
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=25.1543999,cover=250.695007
+		3:[number_project<6] yes=9,no=10,missing=10,gain=11.3600235,cover=166.151505
+			9:[number_project<3] yes=23,no=24,missing=24,gain=4.7641983,cover=156.768005
+				23:[satisfaction_level<0.629999995] yes=31,no=32,missing=32,gain=2.92846656,cover=14.1552982
+					31:leaf=-0.0719131455,cover=4.9916501
+					32:leaf=0.0161457118,cover=9.16364765
+				24:[time_spend_company<4] yes=37,no=38,missing=38,gain=1.13809204,cover=142.612701
+					37:leaf=-0.0860474482,cover=108.189377
+					38:leaf=-0.0591572039,cover=34.4233284
+			10:[satisfaction_level<0.819999993] yes=29,no=30,missing=30,gain=3.13555241,cover=9.38349724
+				29:[last_evaluation<0.620000005] yes=39,no=40,missing=40,gain=1.05182147,cover=7.72513247
+					39:leaf=0.00149665156,cover=2.45302677
+					40:leaf=0.0837310106,cover=5.27210617
+				30:leaf=-0.063043125,cover=1.65836453
+		4:[time_spend_company<6] yes=7,no=8,missing=8,gain=14.1253939,cover=84.5435104
+			7:[number_project<6] yes=15,no=16,missing=16,gain=8.23881149,cover=47.5723152
+				15:[Work_accident<1] yes=17,no=18,missing=18,gain=8.61693954,cover=45.0713005
+					17:leaf=0.0616431721,cover=39.6913109
+					18:leaf=-0.0641636997,cover=5.37998867
+				16:leaf=-0.100000001,cover=2.50101542
+			8:[number_project<4] yes=21,no=22,missing=22,gain=7.44345284,cover=36.971199
+				21:leaf=-0.100000001,cover=9.76009178
+				22:[time_spend_company<7] yes=25,no=26,missing=26,gain=4.43547821,cover=27.2111053
+					25:leaf=0.00400231918,cover=21.6630096
+					26:leaf=-0.0893836766,cover=5.54809713
+booster[36]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=24.9247646,cover=372.533234
+	1:[satisfaction_level<0.119999997] yes=7,no=8,missing=8,gain=12.0311375,cover=131.086853
+		7:leaf=0.0957463831,cover=13.4219379
+		8:[average_montly_hours<161] yes=13,no=14,missing=14,gain=10.810605,cover=117.664925
+			13:[average_montly_hours<127] yes=15,no=16,missing=16,gain=16.4521942,cover=59.9657974
+				15:leaf=-0.100000001,cover=7.46393776
+				16:[time_spend_company<3] yes=21,no=22,missing=22,gain=6.54601479,cover=52.5018578
+					21:leaf=-0.0508615449,cover=5.07809877
+					22:leaf=0.0603823029,cover=47.4237595
+			14:[average_montly_hours<198] yes=17,no=18,missing=18,gain=6.68810749,cover=57.6991234
+				17:[last_evaluation<0.870000005] yes=29,no=30,missing=30,gain=2.64376163,cover=20.3421059
+					29:leaf=-0.0944667235,cover=15.8937769
+					30:leaf=-0.00434363727,cover=4.4483285
+				18:[satisfaction_level<0.25] yes=19,no=20,missing=20,gain=9.71810532,cover=37.3570175
+					19:leaf=-0.0636154935,cover=15.710618
+					20:leaf=0.0368745625,cover=21.6464005
+	2:[time_spend_company<4] yes=3,no=4,missing=4,gain=24.2750854,cover=241.446365
+		3:[average_montly_hours<275] yes=25,no=26,missing=26,gain=4.05124664,cover=116.859726
+			25:[number_project<6] yes=27,no=28,missing=28,gain=3.68299866,cover=113.479683
+				27:[number_project<3] yes=35,no=36,missing=36,gain=0.779724121,cover=108.59832
+					35:leaf=-0.0447069183,cover=9.0918951
+					36:leaf=-0.0870782137,cover=99.506424
+				28:[last_evaluation<0.899999976] yes=31,no=32,missing=32,gain=2.56351352,cover=4.88136053
+					31:leaf=-0.0411165021,cover=3.48792577
+					32:leaf=0.0869111642,cover=1.39343488
+			26:[last_evaluation<0.910000026] yes=33,no=34,missing=34,gain=2.34304237,cover=3.38004112
+				33:leaf=-0.0385447256,cover=1.99148989
+				34:leaf=0.0943758115,cover=1.38855124
+		4:[satisfaction_level<0.930000007] yes=5,no=6,missing=6,gain=12.6044617,cover=124.586639
+			5:[last_evaluation<0.810000002] yes=9,no=10,missing=10,gain=11.0176849,cover=113.501328
+				9:[average_montly_hours<263] yes=23,no=24,missing=24,gain=4.28364801,cover=44.2545586
+					23:leaf=-0.0533565767,cover=38.6526299
+					24:leaf=0.0345215909,cover=5.6019311
+				10:[number_project<4] yes=11,no=12,missing=12,gain=11.3958263,cover=69.2467651
+					11:leaf=-0.0622052662,cover=12.2205725
+					12:leaf=0.0406881534,cover=57.0261955
+			6:leaf=-0.100000001,cover=11.0853138
+booster[37]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=19.7769928,cover=352.599426
+	1:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=11.1541948,cover=126.103943
+		5:leaf=0.0948650762,cover=12.4236383
+		6:[satisfaction_level<0.310000002] yes=7,no=8,missing=8,gain=10.6299162,cover=113.680305
+			7:[last_evaluation<0.629999995] yes=25,no=26,missing=26,gain=4.7407012,cover=35.5415382
+				25:[satisfaction_level<0.159999996] yes=27,no=28,missing=28,gain=3.34065008,cover=14.6810141
+					27:leaf=0.0684574544,cover=3.80287623
+					28:leaf=-0.0303311441,cover=10.8781376
+				26:[satisfaction_level<0.140000001] yes=31,no=32,missing=32,gain=2.34658337,cover=20.8605251
+					31:leaf=0.0140557662,cover=2.14438844
+					32:leaf=-0.0866195634,cover=18.7161369
+			8:[average_montly_hours<126] yes=13,no=14,missing=14,gain=8.5821743,cover=78.1387634
+				13:leaf=-0.100000001,cover=4.6132226
+				14:[last_evaluation<0.449999988] yes=17,no=18,missing=18,gain=7.7767477,cover=73.5255432
+					17:leaf=-0.0922428891,cover=4.05660343
+					18:leaf=0.0363229476,cover=69.4689407
+	2:[time_spend_company<5] yes=3,no=4,missing=4,gain=21.7798729,cover=226.495483
+		3:[number_project<6] yes=19,no=20,missing=20,gain=7.20183563,cover=148.841278
+			19:[number_project<3] yes=21,no=22,missing=22,gain=5.62295532,cover=138.626053
+				21:[average_montly_hours<240] yes=23,no=24,missing=24,gain=5.09522581,cover=13.5374098
+					23:leaf=-0.0515136383,cover=8.60276413
+					24:leaf=0.0662479699,cover=4.93464565
+				22:[time_spend_company<4] yes=29,no=30,missing=30,gain=3.10107422,cover=125.088646
+					29:leaf=-0.0849141181,cover=93.59095
+					30:leaf=-0.0451986454,cover=31.497694
+			20:[satisfaction_level<0.819999993] yes=33,no=34,missing=34,gain=1.76785302,cover=10.2152195
+				33:[average_montly_hours<266] yes=35,no=36,missing=36,gain=2.18488455,cover=8.73251629
+					35:leaf=0.0556762815,cover=7.50835991
+					36:leaf=-0.0567853451,cover=1.22415614
+				34:leaf=-0.0596878193,cover=1.48270345
+		4:[time_spend_company<7] yes=9,no=10,missing=10,gain=9.85070229,cover=77.6542053
+			9:[satisfaction_level<0.930000007] yes=11,no=12,missing=12,gain=8.9993782,cover=69.1863022
+				11:[number_project<6] yes=15,no=16,missing=16,gain=8.26565933,cover=64.6891785
+					15:leaf=0.0347606353,cover=61.1437874
+					16:leaf=-0.100000001,cover=3.54539466
+				12:leaf=-0.100000001,cover=4.49712372
+			10:leaf=-0.0934130773,cover=8.46789837
+booster[38]:
+0:[Work_accident<1] yes=1,no=2,missing=2,gain=19.4901237,cover=341.915009
+	1:[number_project<7] yes=3,no=4,missing=4,gain=11.4240475,cover=294.953918
+		3:[number_project<3] yes=5,no=6,missing=6,gain=12.4593925,cover=290.032715
+			5:[average_montly_hours<127] yes=11,no=12,missing=12,gain=6.52488708,cover=56.7124367
+				11:leaf=-0.0888146013,cover=3.65110898
+				12:[last_evaluation<0.449999988] yes=13,no=14,missing=14,gain=5.59632778,cover=53.0613251
+					13:leaf=-0.0844667777,cover=2.73231483
+					14:leaf=0.0429243408,cover=50.3290138
+			6:[time_spend_company<4] yes=7,no=8,missing=8,gain=18.4252777,cover=233.320267
+				7:[average_montly_hours<287] yes=15,no=16,missing=16,gain=4.06930923,cover=98.2414856
+					15:leaf=-0.0619403198,cover=97.0954361
+					16:leaf=0.0811611786,cover=1.14605272
+				8:[time_spend_company<7] yes=9,no=10,missing=10,gain=8.89979362,cover=135.078781
+					9:leaf=0.00449442072,cover=126.285744
+					10:leaf=-0.0944105685,cover=8.7930336
+		4:leaf=0.100000001,cover=4.9212141
+	2:[average_montly_hours<276] yes=17,no=18,missing=18,gain=1.03215408,cover=46.9610901
+		17:[number_project<5] yes=19,no=20,missing=20,gain=0.303268433,cover=45.0339012
+			19:[average_montly_hours<159] yes=27,no=28,missing=28,gain=0.0673122406,cover=31.7291603
+				27:[last_evaluation<0.629999995] yes=29,no=30,missing=30,gain=0.469052315,cover=9.13952446
+					29:leaf=-0.0284552462,cover=4.78440666
+					30:leaf=-0.0867348537,cover=4.3551178
+				28:leaf=-0.100000001,cover=22.5896358
+			20:[time_spend_company<5] yes=21,no=22,missing=22,gain=0.934798241,cover=13.3047428
+				21:[average_montly_hours<136] yes=25,no=26,missing=26,gain=0.425544262,cover=8.05149174
+					25:leaf=-0.00450531812,cover=1.06015348
+					26:leaf=-0.088019453,cover=6.99133778
+				22:[last_evaluation<0.939999998] yes=23,no=24,missing=24,gain=0.605920911,cover=5.25325155
+					23:leaf=-0.0358255953,cover=4.18648291
+					24:leaf=0.0280337632,cover=1.06676877
+		18:leaf=-0.00330091803,cover=1.92718947
+booster[39]:
+0:[Work_accident<1] yes=1,no=2,missing=2,gain=18.1275902,cover=330.280975
+	1:[satisfaction_level<0.920000017] yes=3,no=4,missing=4,gain=17.6146965,cover=286.068268
+		3:[satisfaction_level<0.119999997] yes=5,no=6,missing=6,gain=11.4611712,cover=265.336823
+			5:leaf=0.0928773582,cover=10.454463
+			6:[last_evaluation<1] yes=7,no=8,missing=8,gain=9.23032761,cover=254.882355
+				7:[last_evaluation<0.449999988] yes=9,no=10,missing=10,gain=7.65036345,cover=246.118744
+					9:leaf=-0.0986133739,cover=9.07230473
+					10:leaf=-0.00938624237,cover=237.046448
+				8:[time_spend_company<4] yes=19,no=20,missing=20,gain=0.745101452,cover=8.7636137
+					19:leaf=0.00593990367,cover=1.40997446
+					20:leaf=0.0975789949,cover=7.3536396
+		4:[satisfaction_level<0.930000007] yes=25,no=26,missing=26,gain=0.00473403931,cover=20.731432
+			25:[time_spend_company<5] yes=27,no=28,missing=28,gain=0.653443038,cover=3.24574137
+				27:leaf=-0.0696134642,cover=2.22671556
+				28:leaf=0.00820837263,cover=1.01902592
+			26:leaf=-0.100000001,cover=17.4856911
+	2:[satisfaction_level<0.150000006] yes=11,no=12,missing=12,gain=3.87249756,cover=44.2127113
+		11:leaf=0.0420918129,cover=1.79234135
+		12:[satisfaction_level<0.819999993] yes=13,no=14,missing=14,gain=1.01388168,cover=42.4203682
+			13:[average_montly_hours<161] yes=21,no=22,missing=22,gain=0.0435848236,cover=31.4468098
+				21:[average_montly_hours<153] yes=23,no=24,missing=24,gain=0.666014671,cover=9.90945148
+					23:leaf=-0.0777068734,cover=7.92783976
+					24:leaf=-0.00494995667,cover=1.98161113
+				22:leaf=-0.100000001,cover=21.5373592
+			14:[last_evaluation<0.810000002] yes=15,no=16,missing=16,gain=2.44289708,cover=10.9735584
+				15:leaf=-0.0898370445,cover=5.77438641
+				16:[satisfaction_level<0.899999976] yes=17,no=18,missing=18,gain=2.45333123,cover=5.1991725
+					17:leaf=0.0582751632,cover=2.66425586
+					18:leaf=-0.058481019,cover=2.5349164
+booster[40]:
+0:[Work_accident<1] yes=1,no=2,missing=2,gain=14.318058,cover=325.190704
+	1:[number_project<7] yes=3,no=4,missing=4,gain=9.78564358,cover=283.706055
+		3:[average_montly_hours<127] yes=5,no=6,missing=6,gain=8.85969162,cover=279.290924
+			5:leaf=-0.0978932455,cover=10.7622595
+			6:[number_project<3] yes=7,no=8,missing=8,gain=9.61037731,cover=268.528656
+				7:[time_spend_company<4] yes=11,no=12,missing=12,gain=6.4397707,cover=52.1875076
+					11:leaf=0.0459463932,cover=42.3787231
+					12:leaf=-0.040494822,cover=9.80878639
+				8:[time_spend_company<4] yes=9,no=10,missing=10,gain=16.4362755,cover=216.341156
+					9:leaf=-0.0506921373,cover=90.2196579
+					10:leaf=0.0049335314,cover=126.121498
+		4:leaf=0.100000001,cover=4.41512442
+	2:[average_montly_hours<159] yes=13,no=14,missing=14,gain=1.08431625,cover=41.4846535
+		13:[average_montly_hours<156] yes=15,no=16,missing=16,gain=6.41599894,cover=11.7173424
+			15:[number_project<3] yes=17,no=18,missing=18,gain=0.623959064,cover=10.5337563
+				17:[last_evaluation<0.550000012] yes=19,no=20,missing=20,gain=0.476258516,cover=2.86847997
+					19:leaf=0.0119392164,cover=1.81793165
+					20:leaf=-0.050911583,cover=1.0505482
+				18:leaf=-0.0817826986,cover=7.66527605
+			16:leaf=0.100000001,cover=1.18358648
+		14:[number_project<4] yes=21,no=22,missing=22,gain=0.414583206,cover=29.7673111
+			21:leaf=-0.100000001,cover=11.5952806
+			22:[time_spend_company<4] yes=23,no=24,missing=24,gain=0.780783653,cover=18.1720295
+				23:leaf=-0.0906748548,cover=7.37248278
+				24:[last_evaluation<0.779999971] yes=25,no=26,missing=26,gain=1.16267705,cover=10.7995472
+					25:leaf=-0.0714874789,cover=4.7890358
+					26:leaf=-0.00560447527,cover=6.0105114
+booster[41]:
+0:[average_montly_hours<288] yes=1,no=2,missing=2,gain=11.9107723,cover=316.341492
+	1:[Work_accident<1] yes=3,no=4,missing=4,gain=10.8826723,cover=310.277924
+		3:[last_evaluation<1] yes=5,no=6,missing=6,gain=9.36831665,cover=271.89975
+			5:[number_project<3] yes=7,no=8,missing=8,gain=7.24075603,cover=263.159668
+				7:[last_evaluation<0.589999974] yes=11,no=12,missing=12,gain=8.75039101,cover=52.311718
+					11:leaf=0.04354522,cover=35.833992
+					12:leaf=-0.0423430018,cover=16.4777279
+				8:[time_spend_company<4] yes=9,no=10,missing=10,gain=13.7345037,cover=210.847946
+					9:leaf=-0.0559774525,cover=85.1126556
+					10:leaf=-0.00400859816,cover=125.735291
+			6:[average_montly_hours<187] yes=21,no=22,missing=22,gain=0.418045044,cover=8.74008942
+				21:leaf=0.0185922403,cover=1.83151436
+				22:leaf=0.0941513628,cover=6.90857458
+		4:[average_montly_hours<159] yes=13,no=14,missing=14,gain=1.1960125,cover=38.3781662
+			13:[average_montly_hours<156] yes=15,no=16,missing=16,gain=5.9860363,cover=10.9845772
+				15:[number_project<3] yes=17,no=18,missing=18,gain=0.793371201,cover=9.7753067
+					17:leaf=-0.00789090618,cover=2.56791234
+					18:leaf=-0.0799153671,cover=7.20739412
+				16:leaf=0.100000001,cover=1.20927095
+			14:[average_montly_hours<276] yes=19,no=20,missing=20,gain=0.529582977,cover=27.393589
+				19:[last_evaluation<0.810000002] yes=23,no=24,missing=24,gain=0.179321289,cover=26.0597515
+					23:leaf=-0.0990137681,cover=14.2224245
+					24:leaf=-0.0604605936,cover=11.837326
+				20:leaf=-0.00606026733,cover=1.33383894
+	2:leaf=0.100000001,cover=6.06356335
+booster[42]:
+0:[Work_accident<1] yes=1,no=2,missing=2,gain=11.4045315,cover=309.544464
+	1:[average_montly_hours<126] yes=3,no=4,missing=4,gain=9.25824833,cover=272.684387
+		3:leaf=-0.100000001,cover=9.4330864
+		4:[number_project<7] yes=5,no=6,missing=6,gain=8.33483028,cover=263.251282
+			5:[number_project<3] yes=7,no=8,missing=8,gain=7.68801594,cover=259.086456
+				7:[last_evaluation<0.449999988] yes=11,no=12,missing=12,gain=4.6267395,cover=51.3227272
+					11:leaf=-0.0818368942,cover=2.67016459
+					12:leaf=0.0347492546,cover=48.652565
+				8:[time_spend_company<4] yes=9,no=10,missing=10,gain=12.892746,cover=207.763718
+					9:leaf=-0.0465541855,cover=81.4972305
+					10:leaf=0.00418565189,cover=126.266495
+			6:leaf=0.100000001,cover=4.16484308
+	2:[number_project<4] yes=13,no=14,missing=14,gain=1.71856689,cover=36.8600807
+		13:[average_montly_hours<161] yes=21,no=22,missing=22,gain=0.28130722,cover=16.1251125
+			21:[last_evaluation<0.560000002] yes=23,no=24,missing=24,gain=0.715717673,cover=6.12351036
+				23:leaf=-0.00764148636,cover=2.8937254
+				24:leaf=-0.0796997324,cover=3.22978497
+			22:leaf=-0.100000001,cover=10.0016012
+		14:[time_spend_company<4] yes=15,no=16,missing=16,gain=3.70951462,cover=20.7349682
+			15:leaf=-0.0917456374,cover=8.23281479
+			16:[last_evaluation<0.620000005] yes=17,no=18,missing=18,gain=2.8489604,cover=12.5021524
+				17:leaf=-0.0782640353,cover=3.02375746
+				18:[last_evaluation<0.889999986] yes=19,no=20,missing=20,gain=2.202775,cover=9.47839451
+					19:leaf=0.0561101846,cover=5.78145504
+					20:leaf=-0.0329895988,cover=3.69693995
+booster[43]:
+0:[satisfaction_level<0.49000001] yes=1,no=2,missing=2,gain=16.1356525,cover=304.170227
+	1:[satisfaction_level<0.129999995] yes=11,no=12,missing=12,gain=7.20486021,cover=112.175156
+		11:[last_evaluation<0.779999971] yes=29,no=30,missing=30,gain=0.852696419,cover=11.2367382
+			29:leaf=0.00130105123,cover=1.32667625
+			30:leaf=0.0953395069,cover=9.91006184
+		12:[last_evaluation<0.449999988] yes=13,no=14,missing=14,gain=5.65602732,cover=100.938423
+			13:leaf=-0.0889784172,cover=5.06312704
+			14:[last_evaluation<0.579999983] yes=15,no=16,missing=16,gain=8.98059082,cover=95.8752899
+				15:[time_spend_company<3] yes=21,no=22,missing=22,gain=4.41070747,cover=45.6387787
+					21:leaf=-0.049070023,cover=3.91506553
+					22:leaf=0.051996734,cover=41.7237129
+				16:[time_spend_company<3] yes=23,no=24,missing=24,gain=3.99522591,cover=50.236515
+					23:leaf=0.0463675037,cover=7.09036875
+					24:leaf=-0.0300437044,cover=43.1461449
+	2:[satisfaction_level<0.930000007] yes=3,no=4,missing=4,gain=10.1016502,cover=191.995071
+		3:[time_spend_company<4] yes=5,no=6,missing=6,gain=9.47845745,cover=173.999268
+			5:[number_project<6] yes=17,no=18,missing=18,gain=5.614645,cover=71.1314316
+				17:[number_project<3] yes=19,no=20,missing=20,gain=4.72194099,cover=67.0611725
+					19:leaf=0.00410164706,cover=9.19780445
+					20:leaf=-0.0715085864,cover=57.8633652
+				18:[last_evaluation<0.620000005] yes=25,no=26,missing=26,gain=2.79522371,cover=4.07026291
+					25:leaf=-0.0517189763,cover=1.11170113
+					26:leaf=0.0938261375,cover=2.95856166
+			6:[satisfaction_level<0.699999988] yes=7,no=8,missing=8,gain=8.51684093,cover=102.867828
+				7:[last_evaluation<0.839999974] yes=27,no=28,missing=28,gain=1.40784502,cover=31.3641872
+					27:leaf=-0.0287095513,cover=18.962244
+					28:leaf=-0.0752602816,cover=12.4019432
+				8:[last_evaluation<0.810000002] yes=9,no=10,missing=10,gain=8.74817657,cover=71.5036469
+					9:leaf=-0.0405558795,cover=20.8568459
+					10:leaf=0.0348776542,cover=50.6467972
+		4:leaf=-0.100000001,cover=17.9958038
+booster[44]:
+0:[satisfaction_level<0.920000017] yes=1,no=2,missing=2,gain=13.7275047,cover=291.601013
+	1:[satisfaction_level<0.150000006] yes=3,no=4,missing=4,gain=11.0336256,cover=271.99823
+		3:[time_spend_company<5] yes=11,no=12,missing=12,gain=3.02683926,cover=15.5717869
+			11:[last_evaluation<0.610000014] yes=19,no=20,missing=20,gain=1.70513821,cover=11.489172
+				19:leaf=-0,cover=1.55324256
+				20:leaf=0.100000001,cover=9.9359293
+			12:[average_montly_hours<276] yes=17,no=18,missing=18,gain=2.05162215,cover=4.0826149
+				17:[last_evaluation<0.660000026] yes=27,no=28,missing=28,gain=0.130302429,cover=3.0486536
+					27:leaf=-0.00122847944,cover=1.04413009
+					28:leaf=-0.0552389696,cover=2.00452352
+				18:leaf=0.0788971931,cover=1.0339613
+		4:[Work_accident<1] yes=5,no=6,missing=6,gain=13.3996801,cover=256.426453
+			5:[average_montly_hours<126] yes=7,no=8,missing=8,gain=7.62165308,cover=226.834991
+				7:leaf=-0.0981054753,cover=7.51738691
+				8:[number_project<3] yes=9,no=10,missing=10,gain=6.9092803,cover=219.317596
+					9:leaf=0.0321982689,cover=46.3696976
+					10:leaf=-0.0108712632,cover=172.947906
+			6:[satisfaction_level<0.819999993] yes=13,no=14,missing=14,gain=2.25323105,cover=29.5914631
+				13:[average_montly_hours<161] yes=25,no=26,missing=26,gain=0.316699982,cover=24.7532349
+					25:leaf=-0.0547654219,cover=8.30654812
+					26:leaf=-0.0997126773,cover=16.4466858
+				14:[last_evaluation<0.810000002] yes=15,no=16,missing=16,gain=2.75688243,cover=4.8382287
+					15:leaf=-0.0730070323,cover=2.38879013
+					16:leaf=0.0537591651,cover=2.44943881
+	2:[satisfaction_level<0.930000007] yes=21,no=22,missing=22,gain=0.316965103,cover=19.6027718
+		21:[time_spend_company<5] yes=23,no=24,missing=24,gain=0.998740196,cover=3.50063467
+			23:leaf=-0.0704376251,cover=2.31760406
+			24:leaf=0.0194447879,cover=1.18303072
+		22:leaf=-0.100000001,cover=16.1021366
+booster[45]:
+0:[satisfaction_level<0.920000017] yes=1,no=2,missing=2,gain=13.9063845,cover=285.903778
+	1:[satisfaction_level<0.119999997] yes=3,no=4,missing=4,gain=9.14294243,cover=267.305298
+		3:leaf=0.0900106356,cover=8.18034363
+		4:[average_montly_hours<127] yes=5,no=6,missing=6,gain=7.97347736,cover=259.124969
+			5:leaf=-0.0961675867,cover=9.6891861
+			6:[average_montly_hours<140] yes=7,no=8,missing=8,gain=8.20508575,cover=249.435776
+				7:[satisfaction_level<0.479999989] yes=11,no=12,missing=12,gain=4.44366598,cover=21.0327988
+					11:leaf=0.078412585,cover=14.9662123
+					12:leaf=-0.0183906388,cover=6.06658697
+				8:[last_evaluation<1] yes=9,no=10,missing=10,gain=9.2355442,cover=228.402969
+					9:leaf=-0.0173693951,cover=220.539291
+					10:leaf=0.0866787434,cover=7.86368322
+	2:[satisfaction_level<0.930000007] yes=13,no=14,missing=14,gain=0.122991562,cover=18.5984745
+		13:[average_montly_hours<240] yes=15,no=16,missing=16,gain=0.243865728,cover=3.21604753
+			15:leaf=-0.0619120188,cover=1.67736804
+			16:leaf=-0.00237352564,cover=1.53867948
+		14:leaf=-0.100000001,cover=15.3824272
+booster[46]:
+0:[satisfaction_level<0.920000017] yes=1,no=2,missing=2,gain=13.1400385,cover=282.799255
+	1:[satisfaction_level<0.150000006] yes=3,no=4,missing=4,gain=8.37998867,cover=265.828827
+		3:[time_spend_company<5] yes=11,no=12,missing=12,gain=2.88843107,cover=14.0805197
+			11:[last_evaluation<0.610000014] yes=15,no=16,missing=16,gain=1.07312202,cover=10.1061935
+				15:leaf=-0,cover=1.34328365
+				16:[number_project<4] yes=17,no=18,missing=18,gain=0.192733765,cover=8.76290894
+					17:leaf=0.0178584605,cover=1.06415451
+					18:leaf=0.100000001,cover=7.69875479
+			12:[average_montly_hours<274] yes=13,no=14,missing=14,gain=1.3162626,cover=3.97432637
+				13:[last_evaluation<0.680000007] yes=19,no=20,missing=20,gain=0.125812232,cover=2.81753635
+					19:leaf=-0,cover=1.01489389
+					20:leaf=-0.0518165827,cover=1.80264246
+				14:leaf=0.056937065,cover=1.15679002
+		4:[last_evaluation<0.449999988] yes=5,no=6,missing=6,gain=7.24041557,cover=251.748306
+			5:leaf=-0.0964277014,cover=8.65100288
+			6:[time_spend_company<7] yes=7,no=8,missing=8,gain=7.00358772,cover=243.097305
+				7:[average_montly_hours<126] yes=9,no=10,missing=10,gain=6.75239325,cover=234.89447
+					9:leaf=-0.0959025919,cover=6.81513691
+					10:leaf=-0.00130175636,cover=228.07933
+				8:leaf=-0.0935448632,cover=8.20284367
+	2:leaf=-0.0955041647,cover=16.9704323
+booster[47]:
+0:[satisfaction_level<0.930000007] yes=1,no=2,missing=2,gain=11.6125746,cover=278.233582
+	1:[Work_accident<1] yes=3,no=4,missing=4,gain=9.48461342,cover=265.415009
+		3:[average_montly_hours<248] yes=5,no=6,missing=6,gain=7.60608816,cover=236.647156
+			5:[satisfaction_level<0.49000001] yes=7,no=8,missing=8,gain=6.44864702,cover=171.672577
+				7:[average_montly_hours<126] yes=15,no=16,missing=16,gain=4.38453913,cover=72.2707596
+					15:leaf=-0.0847197399,cover=3.2946279
+					16:leaf=0.0192700643,cover=68.9761353
+				8:[time_spend_company<5] yes=9,no=10,missing=10,gain=8.41139603,cover=99.4018097
+					9:leaf=-0.0476847552,cover=62.7500839
+					10:leaf=0.0119767971,cover=36.6517296
+			6:[time_spend_company<6] yes=11,no=12,missing=12,gain=4.53850603,cover=64.9745865
+				11:[time_spend_company<4] yes=13,no=14,missing=14,gain=5.36846256,cover=53.0425186
+					13:leaf=-0.000157835661,cover=18.4082355
+					14:leaf=0.0658005401,cover=34.634285
+				12:[satisfaction_level<0.529999971] yes=19,no=20,missing=20,gain=1.56552362,cover=11.9320688
+					19:leaf=-0.0773706213,cover=2.76165771
+					20:leaf=-0,cover=9.17041111
+		4:[satisfaction_level<0.150000006] yes=17,no=18,missing=18,gain=3.71753311,cover=28.7678528
+			17:leaf=0.0593420863,cover=1.67375827
+			18:[satisfaction_level<0.819999993] yes=21,no=22,missing=22,gain=1.50746632,cover=27.0940933
+				21:[last_evaluation<0.629999995] yes=25,no=26,missing=26,gain=0.386087418,cover=22.0558949
+					25:leaf=-0.048262056,cover=8.57789993
+					26:leaf=-0.092495434,cover=13.4779949
+				22:[last_evaluation<0.810000002] yes=23,no=24,missing=24,gain=1.90020144,cover=5.03819895
+					23:leaf=-0.0698336661,cover=2.15216041
+					24:leaf=0.034397345,cover=2.88603854
+	2:leaf=-0.0990114883,cover=12.818573
+booster[48]:
+0:[last_evaluation<0.449999988] yes=1,no=2,missing=2,gain=7.49003077,cover=272.955475
+	1:leaf=-0.0958370566,cover=8.58781815
+	2:[Work_accident<1] yes=3,no=4,missing=4,gain=7.14056158,cover=264.367645
+		3:[time_spend_company<7] yes=5,no=6,missing=6,gain=6.7597127,cover=236.19017
+			5:[average_montly_hours<127] yes=7,no=8,missing=8,gain=5.76426983,cover=229.309433
+				7:leaf=-0.0852477327,cover=6.13506556
+				8:[average_montly_hours<140] yes=9,no=10,missing=10,gain=6.18186522,cover=223.174377
+					9:leaf=0.0612716377,cover=17.5727882
+					10:leaf=0.000965929416,cover=205.601578
+			6:leaf=-0.0910190791,cover=6.88073635
+		4:[time_spend_company<4] yes=11,no=12,missing=12,gain=1.84175873,cover=28.1774693
+			11:[average_montly_hours<161] yes=17,no=18,missing=18,gain=0.637663841,cover=13.2754936
+				17:[number_project<3] yes=19,no=20,missing=20,gain=1.36295187,cover=5.03995037
+					19:leaf=0.0156873893,cover=2.27110386
+					20:leaf=-0.0740847513,cover=2.76884675
+				18:leaf=-0.0972310007,cover=8.23554325
+			12:[number_project<4] yes=13,no=14,missing=14,gain=3.30814457,cover=14.9019756
+				13:leaf=-0.0877425447,cover=4.48560476
+				14:[average_montly_hours<241] yes=15,no=16,missing=16,gain=2.19175792,cover=10.4163713
+					15:leaf=0.0392584167,cover=6.82537127
+					16:leaf=-0.047594171,cover=3.59100008
+booster[49]:
+0:[satisfaction_level<0.930000007] yes=1,no=2,missing=2,gain=9.95397663,cover=271.666687
+	1:[average_montly_hours<288] yes=3,no=4,missing=4,gain=8.02446461,cover=260.049805
+		3:[last_evaluation<0.449999988] yes=5,no=6,missing=6,gain=6.18366766,cover=255.306
+			5:leaf=-0.0936419964,cover=7.45745754
+			6:[time_spend_company<7] yes=7,no=8,missing=8,gain=5.39105463,cover=247.848557
+				7:[average_montly_hours<126] yes=9,no=10,missing=10,gain=5.21481133,cover=241.240799
+					9:leaf=-0.0909223929,cover=5.68833542
+					10:leaf=-0.00130531611,cover=235.552475
+				8:leaf=-0.0894535705,cover=6.6077466
+		4:leaf=0.100000001,cover=4.74379492
+	2:leaf=-0.0978987068,cover=11.6168909
